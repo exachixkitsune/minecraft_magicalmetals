@@ -3,7 +3,7 @@ Magical Metals Repository
 
 This is a minecraft mod for Minecraft v1.16.3, under Forge 34.1.0.
 
-It is dependant on Patchouli, found at:
+It is dependant on Patchouli version 1.16.2, version 47, found at:
 > https://www.curseforge.com/minecraft/mc-mods/patchouli
 
 > https://github.com/Vazkii/Patchouli
@@ -20,3 +20,8 @@ See: https://itch.io/jam/dbgj2020
 
 This game jam ran during Desert Bus for Hope 2020, a charity drive stream for Childs Play.
 See: https://desertbus.org
+
+# References
+Thanks to Botania (https://botaniamod.net/) for having an open source to look at and go "Hey, why does this thing not work."
+
+Thanks to MinecraftByExample (https://github.com/TheGreyGhost/MinecraftByExample) for being an example-based tutorial of how to do things.
