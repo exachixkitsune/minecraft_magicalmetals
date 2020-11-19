@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "magicalmetals:block/metal_luminousgold_block",
+      "uvlock": true
+    }
+  }
+}

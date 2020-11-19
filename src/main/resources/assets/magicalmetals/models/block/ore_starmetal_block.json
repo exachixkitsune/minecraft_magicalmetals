@@ -1,0 +1,13 @@
+{
+    "parent": "block/cube",
+	"ambientocclusion": true,
+    "textures": {
+    	"down": "magicalmetals:block/ore_starmetal_block",
+    	"up": "magicalmetals:block/ore_starmetal_block",
+    	"north": "#down",
+    	"south": "#down",
+    	"west": "#down",
+    	"east": "#down",
+		"particle": "#down"
+    }
+}

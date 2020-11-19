@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		" S",
+		"C " ],
+	"key": {
+		"C": { "item": "magicalmetals:rod_component"},
+		"S": { "item": "magicalmetals:metal_starmetal_ingot"}
+	},
+	"result": {
+		"item": "magicalmetals:rod_dispel",
+		"count": 1
+	}
+}

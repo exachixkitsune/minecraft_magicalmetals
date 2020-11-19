@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "magicalmetals:block/transmutation_matrix",
+      "uvlock": true
+    }
+  }
+}

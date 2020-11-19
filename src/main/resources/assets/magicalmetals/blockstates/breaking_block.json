@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "powered=true": {
+      "model": "magicalmetals:block/breaking_block_powered",
+      "uvlock": true
+    },
+    "powered=false": {
+      "model": "magicalmetals:block/breaking_block",
+      "uvlock": true
+    }
+  }
+}

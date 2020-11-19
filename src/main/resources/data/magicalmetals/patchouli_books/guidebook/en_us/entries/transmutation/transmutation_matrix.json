@@ -1,0 +1,75 @@
+{
+	"name": "Transmutation Matrix",
+	"icon": "magicalmetals:transmutation_matrix",
+	"category": "magicalmetals:transmutation",
+	"priority": true,
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "magicalmetals:transmutation_matrix",
+			"text": "This magical block enables the conversion of material blocks from one type to another."
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:transmutation/transmutation_matrix"
+		},
+		{
+			"type": "text",
+			"text": "In order to use the transmutation matrix, two stabiliser blocks must be placed 3 blocks away on the vertical axis. Then, input blocks (orichalcum) must be placed opposite each other on a horizontal axis.$(br2)The space where blocks end up must be left empty.$(br)The two 'Anchor' blocks up and down may be of any magical material, or an $(l:transmutation_anchor)."
+		},
+		{
+			"type": "multiblock",
+			"title": "Initial Setup of transmutation setup.",
+			"multiblock": {
+				"pattern": [
+					["_______","_______","_______","___A___","_______","_______","_______"],
+					["_______","_______","_______","_______","_______","_______","_______"],
+					["_______","_______","_______","_______","_______","_______","_______"],
+					["___ ___","_______","_______","O__0__O","_______","_______","___ ___"],
+					["_______","_______","_______","_______","_______","_______","_______"],
+					["_______","_______","_______","_______","_______","_______","_______"],
+					["_______","_______","_______","___A___","_______","_______","_______"]
+				],
+				"mapping": {
+					"0": "magicalmetals:transmutation_matrix",
+					"A": "#magicalmetals:magical_focus_block",
+					"O": "magicalmetals:metal_orichalcum_block"
+				},
+				"symmetric": true
+			}
+		},
+		{
+			"type": "text",
+			"text": "After providing a redstone signal to the transmutation matrix (via a lever, or other redstone source), the orichalcum blocks will be transmuted into the new magical block.$(br2)The new block is decided via the biome, listed on the next page. This may be overriden using a $(l:transmutation/transmutation_anchor)Transmutation Anchor$()}"
+		},
+		{
+			"type": "multiblock",
+			"title": "Result of transmutation.",
+			"multiblock": {
+				"pattern": [
+					["_______","_______","_______","___A___","_______","_______","_______"],
+					["_______","_______","_______","_______","_______","_______","_______"],
+					["_______","_______","_______","_______","_______","_______","_______"],
+					["___P___","_______","_______","___0___","_______","_______","___P___"],
+					["_______","_______","_______","_______","_______","_______","_______"],
+					["_______","_______","_______","_______","_______","_______","_______"],
+					["_______","_______","_______","___A___","_______","_______","_______"]
+				],
+				"mapping": {
+					"0": "magicalmetals:transmutation_matrix",
+					"A": "#magicalmetals:magical_focus_block",
+					"P": "magicalmetals:metal_purestarmetal_block"
+				},
+				"symmetric": true
+			}
+		},
+		{
+			"type": "text",
+			"text": "If the transmutation is performed deep underground (below y=30), the result is $(l:magical_metals/adamant)Adamant$().$(br2)If the transmutation is performed in a wet biome (River, Ocean, Swamp, or Beach), the result is $(l:magical_metals/greeniron)Green Iron$()."
+		},
+		{
+			"type": "text",
+			"text": "If the transmutation is performed in a hot biome (One where it never snows, or the Nether), the result is $(l:magical_metals/luminousgold)Luminous Gold$().$(br2)If the transmutation is performed where it snows, the result is $(l:magical_metals/blueiron)Blue Iron$().$(br2)Otherwise, $(l:magical_metals/purestarmetal)Pure Starmetal$() is produced."
+		}
+	]
+}

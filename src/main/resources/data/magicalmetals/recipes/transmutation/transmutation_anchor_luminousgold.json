@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"IAI",
+		"ABA",
+		"IAI" ],
+	"key": {
+		"B": { "item": "magicalmetals:metal_purestarmetal_block"},
+		"A": { "item": "magicalmetals:metal_luminousgold_ingot"},
+		"I": { "item": "minecraft:iron_ingot"}
+	},
+	"result": {
+		"item": "magicalmetals:transmutation_anchor_luminousgold",
+		"count": 1
+	}
+}

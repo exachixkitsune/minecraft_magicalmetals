@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "magicalmetals:block/transmutation_anchor_pure",
+      "uvlock": true
+    }
+  }
+}

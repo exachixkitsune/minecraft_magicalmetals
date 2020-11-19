@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+	"layer0": "magicalmetals:item/metal_adamant_ingot"
+  }
+}

@@ -1,0 +1,20 @@
+{
+	"name": "About",
+	"icon": "magicalmetals:transmutation_anchor_adamant",
+	"category": "magicalmetals:about",
+	"priority": false,
+	"pages": [
+		{
+			"type": "link",
+			"text": "This mod was created as part of the Desert Bus Game Jam 2020.",
+			"url": "https://itch.io/jam/dbgj2020",
+			"link_text": "DBGJ2020, Itch.io"			
+		},
+		{
+			"type": "link",
+			"text": "This game jam ran during Desert Bus for Hope 2020, a charity drive stream for Childs Play.",
+			"url": "https://desertbus.org/",
+			"link_text": "Desert Bus"
+		}
+	]
+}

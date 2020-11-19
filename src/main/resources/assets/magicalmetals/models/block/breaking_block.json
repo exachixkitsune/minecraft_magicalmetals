@@ -1,0 +1,13 @@
+{
+    "parent": "block/cube",
+	"ambientocclusion": true,
+    "textures": {
+    	"down": "magicalmetals:block/breaking_block",
+    	"up": "#down",
+    	"north": "#down",
+    	"south": "#down",
+    	"west": "#down",
+    	"east": "#down",
+		"particle": "#down"
+    }
+}

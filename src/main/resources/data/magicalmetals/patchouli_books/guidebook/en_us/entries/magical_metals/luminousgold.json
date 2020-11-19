@@ -1,0 +1,18 @@
+{
+	"name": "Luminous Gold",
+	"icon": "magicalmetals:metal_luminousgold_block",
+	"category": "magicalmetals:magical_metals",
+	"priority": false,
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "magicalmetals:metal_luminousgold_block",
+			"text": "Luminous Gold is a glowing material created in the $(l:transmutation/transmutation_matrix)Transmutation Matrix$().$(br2)It may be used as an unaspected focus for the $(l:transmutation/transmutation_matrix)Transmutation Matrix$()."
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:metals/metal_luminousgold_block",
+			"recipe2": "magicalmetals:metals/metal_luminousgold_ingot_craft"
+		}
+	]
+}

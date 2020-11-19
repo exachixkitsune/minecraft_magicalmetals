@@ -1,0 +1,17 @@
+{
+	"name": "Tiny Flags",
+	"icon": "magicalmetals:tiny_flag",
+	"category": "magicalmetals:misc_items",
+	"priority": false,
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "magicalmetals:tiny_flag",
+			"text": "The tiny flag can be used to greet others."
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:tiny_flag"
+		}
+	]
+}

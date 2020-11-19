@@ -1,0 +1,7 @@
+{
+    "parent": "magicalmetals:block/breaking_block",
+	"ambientocclusion": true,
+    "textures": {
+    	"down": "magicalmetals:block/breaking_block_powered"
+    }
+} 

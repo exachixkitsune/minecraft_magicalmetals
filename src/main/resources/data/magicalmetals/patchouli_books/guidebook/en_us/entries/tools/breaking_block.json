@@ -1,0 +1,67 @@
+{
+	"name": "Rods",
+	"icon": "magicalmetals:rod_component",
+	"category": "magicalmetals:tools",
+	"priority": false,
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "magicalmetals:rod_component",
+			"text": "Rods are a method to apply interesting benefitial effects to yourself or friends. Right-click while holding a wand to apply the effect to yourself, or attack a friend with the wand to apply the effect to them."
+		},
+		{
+			"type": "text",
+			"text": "As a warning, the rod will impose a small amount of damage to apply it's effect."
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:rods/rod_component",
+			"text": "This basic component is needed and used by each rod."
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:rods/rod_dispel",
+			"text": "This rod removes all the effects on an entity, benefitial or otherwise."
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:rods/rod_haste",
+			"text": "This rod bestows Haste II for 30s."
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:rods/rod_saturation",
+			"text": "This rod restores some hunger."
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:rods/rod_heal",
+			"text": "This rod restores some health."
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:rods/rod_regen",
+			"text": "This rod bestows Regeneration III for 30s."
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:rods/rod_resistance",
+			"text": "This rod bestows Resistance III for 30s."
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:rods/rod_strength",
+			"text": "This rod bestows Strength III for 30s."
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:rods/rod_sight",
+			"text": "This rod bestows Night Vision for 30s."
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:rods/rod_water",
+			"text": "This rod bestows Water Breathing for 30s."
+		}
+	]
+}

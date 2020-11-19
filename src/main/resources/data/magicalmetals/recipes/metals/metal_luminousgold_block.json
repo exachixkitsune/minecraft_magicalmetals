@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"SSS",
+		"SSS",
+		"SSS" ],
+	"key": {
+		"S": { "item": "magicalmetals:metal_luminousgold_ingot"}
+	},
+	"result": {
+		"item": "magicalmetals:metal_luminousgold_block",
+		"count": 1
+	}
+}

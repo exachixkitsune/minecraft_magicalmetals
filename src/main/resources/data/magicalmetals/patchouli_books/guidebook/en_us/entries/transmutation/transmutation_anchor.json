@@ -1,0 +1,43 @@
+{
+	"name": "Transmutation Anchor",
+	"icon": "magicalmetals:transmutation_anchor_pure",
+	"category": "magicalmetals:transmutation",
+	"priority": false,
+	"pages": [
+		{
+			"type": "spotlight",
+			"title": "Transmutation Anchor",
+			"item": "magicalmetals:transmutation_anchor_pure",
+			"text": "A transmutation anchor provides an way to 'fix' the outputs of the $(l:transmutation/transmutation_matrix)Transmutation Matrix$()."
+		},
+		{
+			"type": "text",
+			"text": "Two different transmutation anchors may be in place on the same transmutation matrix. In this case, the anchor above the matrix defines the transmutation product to the East or South, and the anchor below the matrix defines the transmutation product to the West or North."
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:transmutation/transmutation_anchor_pure",
+			"text": "This anchor ensures an output is $(l:magical_metals/pure_starmetal)Pure Starmetal$()"
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:transmutation/transmutation_anchor_adamant",
+			"text": "This anchor ensures an output is $(l:magical_metals/adamant)Adamant$()"
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:transmutation/transmutation_anchor_blueiron",
+			"text": "This anchor ensures an output is $(l:magical_metals/blueiron)Blue Iron$()"
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:transmutation/transmutation_anchor_greeniron",
+			"text": "This anchor ensures an output is $(l:magical_metals/greeniron)Green Iron$()"
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:transmutation/transmutation_anchor_luminousgold",
+			"text": "This anchor ensures an output is $(l:magical_metals/luminousgold)Luminous Gold$()"
+		}
+	]
+}

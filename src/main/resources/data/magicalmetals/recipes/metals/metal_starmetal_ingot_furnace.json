@@ -1,0 +1,11 @@
+{
+	"type": "minecraft:smelting",
+	"ingredient": {
+		"item": "magicalmetals:ore_starmetal_block"
+	},
+	"result": {
+		"item": "magicalmetals:metal_starmetal_ingot",
+		"count": 1
+	},
+	"experience": 1
+}

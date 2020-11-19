@@ -1,0 +1,13 @@
+{
+    "parent": "block/cube",
+	"ambientocclusion": true,
+    "textures": {
+    	"down": "magicalmetals:block/transmutation_matrix",
+    	"up": "magicalmetals:block/transmutation_matrix",
+    	"north": "#down",
+    	"south": "#down",
+    	"west": "#down",
+    	"east": "#down",
+		"particle": "#down"
+    }
+}

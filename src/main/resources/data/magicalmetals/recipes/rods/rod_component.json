@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"SI",
+		"IS" ],
+	"key": {
+		"S": { "item": "minecraft:stick"},
+		"I": { "item": "magicalmetals:metal_starmetal_ingot"}
+	},
+	"result": {
+		"item": "magicalmetals:rod_component",
+		"count": 1
+	}
+}

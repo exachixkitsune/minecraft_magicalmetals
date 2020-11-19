@@ -1,0 +1,13 @@
+{
+    "parent": "block/cube",
+	"ambientocclusion": true,
+    "textures": {
+    	"down": "magicalmetals:block/transmutation_anchor_luminousgold",
+    	"up": "magicalmetals:block/transmutation_anchor_luminousgold",
+    	"north": "#down",
+    	"south": "#down",
+    	"west": "#down",
+    	"east": "#down",
+		"particle": "#down"
+    }
+}

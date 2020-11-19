@@ -1,0 +1,11 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{"item": "minecraft:gold_block"},
+		{"item": "minecraft:iron_block"}
+	],
+	"result": {
+		"item": "magicalmetals:metal_orichalcum_block",
+		"count": 1
+	}
+}

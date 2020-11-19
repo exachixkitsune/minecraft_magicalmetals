@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"SP ",
+		"SPP",
+		"S  " ],
+	"key": {
+		"S": { "item": "minecraft:stick"},
+		"P": { "item": "minecraft:paper"}
+	},
+	"result": {
+		"item": "magicalmetals:tiny_flag",
+		"count": 1
+	}
+}

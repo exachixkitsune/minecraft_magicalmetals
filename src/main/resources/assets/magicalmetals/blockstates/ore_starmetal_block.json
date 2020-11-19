@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "magicalmetals:block/ore_starmetal_block",
+      "uvlock": true
+    }
+  }
+}

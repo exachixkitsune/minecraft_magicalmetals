@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"ISI",
+		"SBS",
+		"ISI" ],
+	"key": {
+		"B": { "item": "magicalmetals:metal_starmetal_block"},
+		"S": { "item": "magicalmetals:metal_starmetal_ingot"},
+		"I": { "item": "minecraft:iron_ingot"}
+	},
+	"result": {
+		"item": "magicalmetals:transmutation_matrix",
+		"count": 1
+	}
+}
