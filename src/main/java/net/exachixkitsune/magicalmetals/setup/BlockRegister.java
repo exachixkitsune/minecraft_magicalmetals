@@ -63,7 +63,7 @@ public class BlockRegister {
 	
 	// Ore
 	public static final RegistryObject<Block> STARMETAL_ORE_BLOCK = BLOCKS.register("ore_starmetal_block", 
-			() -> new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.STONE).func_235861_h_()));
+			() -> new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.STONE).setRequiresTool()));
 	public static final RegistryObject<Item> STARMETAL_ORE_BLOCK_ITEM = ITEMS.register("ore_starmetal_block",
 			() -> new BlockItem(STARMETAL_ORE_BLOCK.get(), baseProperties));
 	

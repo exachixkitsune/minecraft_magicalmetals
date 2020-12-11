@@ -14,7 +14,7 @@ public class BlocksList {
 	public static final AbstractBlock.Properties common_properties(MaterialColor Colour) {
 		return Block.Properties.create(Material.IRON, Colour)
 				.hardnessAndResistance(1.0F)
-				.func_235861_h_() // This makes it so you must use a tool.
+				.setRequiresTool()
 				.harvestTool(ToolType.PICKAXE)
 				.harvestLevel(1); // Stone+
 	}
@@ -23,7 +23,7 @@ public class BlocksList {
 	public static final Block adamant_block 		= new MagicalFocusBlock(common_properties(MaterialColor.PURPLE));
 	public static final Block blueiron_block 		= new MagicalFocusBlock(common_properties(MaterialColor.BLUE));
 	public static final Block greeniron_block 		= new MagicalFocusBlock(common_properties(MaterialColor.GREEN));
-	public static final Block luminousgold_block 	= new MagicalFocusBlock(common_properties(MaterialColor.GOLD).func_235838_a_((p_235838_1_) -> { return 10; }));
+	public static final Block luminousgold_block 	= new MagicalFocusBlock(common_properties(MaterialColor.GOLD).setLightLevel((p_235838_1_) -> { return 10; }));
 	
 	public static final Block starmetal_block 		= new MagicalFocusBlock(common_properties( MaterialColor.IRON));
 	public static final Block purestarmetal_block 	= new MagicalFocusBlock(common_properties( MaterialColor.IRON));

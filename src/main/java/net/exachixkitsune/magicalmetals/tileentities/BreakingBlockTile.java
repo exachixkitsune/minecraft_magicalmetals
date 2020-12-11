@@ -37,9 +37,9 @@ public class BreakingBlockTile extends TileEntity implements ITickableTileEntity
 		return compoundNBTData;
 	}
 	@Override
-	public void func_230337_a_(BlockState state, CompoundNBT compoundNBTData) {
+	public void read(BlockState state, CompoundNBT compoundNBTData) {
 		// I think this is "read"
-		super.func_230337_a_(state, compoundNBTData);
+		super.read(state, compoundNBTData);
 		TicksRemainingProcessing = compoundNBTData.getInt(KEY_timerProcessing);
 	}
 	
