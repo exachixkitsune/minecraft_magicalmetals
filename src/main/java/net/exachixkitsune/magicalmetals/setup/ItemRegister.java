@@ -43,32 +43,32 @@ public class ItemRegister {
 	
 	// Rods
 	public static final RegistryObject<Item> ROD_COMPONENT = ITEMS.register("rod_component",
-			() -> new Item(new Item.Properties().func_234689_a_().group(MagicalItemGroup.GROUP)));
+			() -> new Item(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP)));
 	public static final RegistryObject<Item> ROD_DISPEL = ITEMS.register("rod_dispel",
-			() -> new Magical_Rod_Dispel(new Item.Properties().func_234689_a_().group(MagicalItemGroup.GROUP)));
+			() -> new Magical_Rod_Dispel(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP)));
 	public static final RegistryObject<Item> ROD_HEAL = ITEMS.register("rod_heal",
-			() -> new Magical_Rod(new Item.Properties().func_234689_a_().group(MagicalItemGroup.GROUP),
+			() -> new Magical_Rod(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP),
 					Effects.INSTANT_HEALTH, 1, 0));
 	public static final RegistryObject<Item> ROD_REGEN = ITEMS.register("rod_regen",
-			() -> new Magical_Rod(new Item.Properties().func_234689_a_().group(MagicalItemGroup.GROUP),
+			() -> new Magical_Rod(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP),
 					Effects.REGENERATION, effectDurationMinor, 2));
 	public static final RegistryObject<Item> ROD_RESIST = ITEMS.register("rod_resistance",
-			() -> new Magical_Rod(new Item.Properties().func_234689_a_().group(MagicalItemGroup.GROUP),
+			() -> new Magical_Rod(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP),
 					Effects.RESISTANCE, effectDurationMinor, 2));
 	public static final RegistryObject<Item> ROD_STRENGTH = ITEMS.register("rod_strength",
-			() -> new Magical_Rod(new Item.Properties().func_234689_a_().group(MagicalItemGroup.GROUP),
+			() -> new Magical_Rod(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP),
 					Effects.STRENGTH, effectDurationMinor, 2));
 	public static final RegistryObject<Item> ROD_HASTE = ITEMS.register("rod_haste",
-			() -> new Magical_Rod(new Item.Properties().func_234689_a_().group(MagicalItemGroup.GROUP),
+			() -> new Magical_Rod(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP),
 					Effects.HASTE, effectDurationMinor, 1));
 	public static final RegistryObject<Item> ROD_WATER = ITEMS.register("rod_water",
-			() -> new Magical_Rod(new Item.Properties().func_234689_a_().group(MagicalItemGroup.GROUP),
+			() -> new Magical_Rod(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP),
 					Effects.WATER_BREATHING, effectDurationMinor, 0));
 	public static final RegistryObject<Item> ROD_SATURATION = ITEMS.register("rod_saturation",
-			() -> new Magical_Rod(new Item.Properties().func_234689_a_().group(MagicalItemGroup.GROUP),
+			() -> new Magical_Rod(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP),
 					Effects.SATURATION, 4, 0));
 	public static final RegistryObject<Item> ROD_SIGHT = ITEMS.register("rod_sight",
-			() -> new Magical_Rod(new Item.Properties().func_234689_a_().group(MagicalItemGroup.GROUP),
+			() -> new Magical_Rod(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP),
 					Effects.NIGHT_VISION, effectDurationMinor, 0));
 	
 	public static void registerItems() {
