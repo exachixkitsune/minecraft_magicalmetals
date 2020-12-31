@@ -1,0 +1,18 @@
+{
+	"name": "Getting Started",
+	"icon": "magicalmetals:metal_starmetal_ingot",
+	"category": "magicalmetals:getting_started",
+	"priority": true,
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "magicalmetals:metal_starmetal_ingot",
+			"title": "Getting Started",
+			"text": "This section of the book discusses how to get started with Magical Metals."
+		},
+		{
+			"type": "text",
+			"text": "Fundamentally, the mod consists of two 'parts', one on $(l:getting_started/creating_metals)creating metals$(), and one of $(l:getting_started/using_metals)using metals$()."
+		}
+	]
+}

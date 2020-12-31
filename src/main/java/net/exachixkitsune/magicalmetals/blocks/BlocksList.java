@@ -37,4 +37,8 @@ public class BlocksList {
 	public static final Block transmutation_anchor_luminousgold = new LuminousgoldAnchor(Properties.create(Material.IRON));
 	
 	public static final Block breaking_block = new BreakingBlock(Properties.create(Material.IRON));
+	
+	public static final Block butterflybox_tree = new ButterflyBoxTree(common_properties(MaterialColor.GREEN).harvestTool(ToolType.AXE));
+	public static final Block butterflybox_crop = new ButterflyBoxCrop(common_properties(MaterialColor.GREEN).harvestTool(ToolType.AXE));
+	public static final Block butterflybox_grass = new ButterflyBoxGrass(common_properties(MaterialColor.GREEN).harvestTool(ToolType.AXE));
 }

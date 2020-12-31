@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"SWS",
+		"WSW",
+		"GWG" ],
+	"key": {
+		"S": { "tag": "minecraft:saplings"},
+		"W": { "tag": "minecraft:planks"},
+		"G": { "item": "magicalmetals:metal_greeniron_block"}
+	},
+	"result": {
+		"item": "magicalmetals:butterflybox_tree",
+		"count": 1
+	}
+}

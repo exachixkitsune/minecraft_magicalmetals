@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "magicalmetals:block/butterflybox_crop",
+      "uvlock": true
+    }
+  }
+}

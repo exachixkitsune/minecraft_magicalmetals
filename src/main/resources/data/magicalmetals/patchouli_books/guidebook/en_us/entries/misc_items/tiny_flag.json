@@ -3,6 +3,7 @@
 	"icon": "magicalmetals:tiny_flag",
 	"category": "magicalmetals:misc_items",
 	"priority": false,
+	"read_by_default": true,
 	"pages": [
 		{
 			"type": "spotlight",

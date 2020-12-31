@@ -3,11 +3,13 @@
 	"icon": "magicalmetals:metal_blueiron_block",
 	"category": "magicalmetals:magical_metals",
 	"priority": false,
+	"read_by_default": true,
 	"pages": [
 		{
 			"type": "spotlight",
+			"title": "Blue Iron",
 			"item": "magicalmetals:metal_blueiron_block",
-			"text": "Blue Iron is a cold material created in the $(l:transmutation/transmutation_matrix)Transmutation Matrix$().$(br2)It may be used as an unaspected focus for the $(l:transmutation/transmutation_matrix)Transmutation Matrix$()."
+			"text": "Blue Iron is a cold material created in the $(l:transmutation/transmutation_matrix)Transmutation Matrix$(). It is created in cold biomes.$(br2)It may be used as an unaspected focus for the $(l:transmutation/transmutation_matrix)Transmutation Matrix$()."
 		},
 		{
 			"type": "crafting",

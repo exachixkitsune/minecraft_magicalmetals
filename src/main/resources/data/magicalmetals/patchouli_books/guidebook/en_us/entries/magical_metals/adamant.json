@@ -3,11 +3,13 @@
 	"icon": "magicalmetals:metal_adamant_block",
 	"category": "magicalmetals:magical_metals",
 	"priority": false,
+	"read_by_default": true,
 	"pages": [
 		{
 			"type": "spotlight",
+			"title": "Adamant",
 			"item": "magicalmetals:metal_adamant_block",
-			"text": "Adamant is a strong material created in the $(l:transmutation/transmutation_matrix)Transmutation Matrix$().$(br2)It may be used as an unaspected focus for the $(l:transmutation/transmutation_matrix)Transmutation Matrix$()."
+			"text": "Adamant is a strong material created in the $(l:transmutation/transmutation_matrix)Transmutation Matrix$(). It is created below y level 30.$(br2)It may be used as an unaspected focus for the $(l:transmutation/transmutation_matrix)Transmutation Matrix$()."
 		},
 		{
 			"type": "crafting",

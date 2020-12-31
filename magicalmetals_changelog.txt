@@ -1,0 +1,22 @@
+Magical Metals Changelog
+
+== Version 1.2 ==
+For Forge 35.1.0
+For Minecraft 1.16.4
+
+	Added:
+		Changelog
+		New functional block - Butterfly Boxes
+			These boxes create the Butterfly entity, which wanders around near it's home and grows trees, or crops, or converts dirt to grass.
+			Entity has a lifetime of 5 minutes, and the box is a TileEntity which checks to create a new butterfly every minute.
+			The butterflys will die if they don't have a home - so if you manually spawn one it won't work, but this means they will die after the server starts up again. This is intentional.
+			
+			All these use green iron to produce.
+		New Recipe
+			Can create grass from dirt using green iron.
+		Book alterations
+			Text in the book has been altered slightly, to make it slighly more readable.
+			Now includes a brief "Getting Started" section to aid beginning.
+			Pages are read by default.
+		Fixes
+			BreakingBlock's tile entity is now created correctly.

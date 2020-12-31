@@ -1,0 +1,30 @@
+{
+	"name": "Creating Metals",
+	"icon": "magicalmetals:transmutation_matrix",
+	"category": "magicalmetals:getting_started",
+	"priority": false,
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "magicalmetals:transmutation_matrix",
+			"title": "Creating Metals",
+			"text": "In order to use metals, first you must create metals."
+		},
+		{
+			"type": "text",
+			"text": "To get started, you will need:$(li)31 Iron Ore, and$(li)4 Iron Ingots$(br2)Additionally, to perform one transmutation action:$(li)2 Iron Blocks, and$(li)2 Gold Blocks.$(br2)Thus, to create all types of metals, you will need:$(li)10 Iron Blocks, and$(li)10 Gold Blocks."
+		},
+		{
+			"type": "text",
+			"text": "The creation process of metals focuses on the $(l:transmutation/transmutation_matrix)transmutation matrix$(). It is through this block that all magical metals are created. To create the $(l:transmutation/transmutation_matrix)transmutation matrix$(), one must first create $(l:magical_metals/starmetal)starmetal$(), obtained from iron ore."
+		},
+		{
+			"type": "text",
+			"text": "$(l:magical_metals/orichalcum)Orichalcum$() is used as the input block to the $(l:transmutation/transmutation_matrix)transmutation matrix$(), and is converted into the new metal types by the transmutation matrix. Every transmutation operation requires two orichalcum blocks, and two 'focus' blocks, as described in $(l:transmutation/transmutation_matrix#transmutationbasics)transmutation matrix$(). Initially, these can be starmetal blocks."
+		},
+		{
+			"type": "text",
+			"text": "The transmutation process is biome dependant, see $(l:transmutation/transmutation_matrix#transmutationbiome)this page$(). After transmuting each metal for the first time, you can then create $(l:transmutation/transmutation_anchor)transmutation anchors$() which simply the process greatly."
+		}
+	]
+}

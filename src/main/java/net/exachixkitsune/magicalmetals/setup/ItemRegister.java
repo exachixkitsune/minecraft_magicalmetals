@@ -17,6 +17,7 @@ public class ItemRegister {
 	private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MagicalMetals.MODID);
 	
 	private static final int maxStackSize = 64;
+	private static final int toolStackSize = 1;
 	private static final int effectDurationMinor = 30*20; // 30 seconds in Ticks
 	
 	// Standard metal's blocks
@@ -43,32 +44,32 @@ public class ItemRegister {
 	
 	// Rods
 	public static final RegistryObject<Item> ROD_COMPONENT = ITEMS.register("rod_component",
-			() -> new Item(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP)));
+			() -> new Item(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP).maxStackSize(toolStackSize)));
 	public static final RegistryObject<Item> ROD_DISPEL = ITEMS.register("rod_dispel",
-			() -> new Magical_Rod_Dispel(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP)));
+			() -> new Magical_Rod_Dispel(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP).maxStackSize(toolStackSize)));
 	public static final RegistryObject<Item> ROD_HEAL = ITEMS.register("rod_heal",
-			() -> new Magical_Rod(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP),
+			() -> new Magical_Rod(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP).maxStackSize(toolStackSize),
 					Effects.INSTANT_HEALTH, 1, 0));
 	public static final RegistryObject<Item> ROD_REGEN = ITEMS.register("rod_regen",
-			() -> new Magical_Rod(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP),
+			() -> new Magical_Rod(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP).maxStackSize(toolStackSize),
 					Effects.REGENERATION, effectDurationMinor, 2));
 	public static final RegistryObject<Item> ROD_RESIST = ITEMS.register("rod_resistance",
-			() -> new Magical_Rod(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP),
+			() -> new Magical_Rod(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP).maxStackSize(toolStackSize),
 					Effects.RESISTANCE, effectDurationMinor, 2));
 	public static final RegistryObject<Item> ROD_STRENGTH = ITEMS.register("rod_strength",
-			() -> new Magical_Rod(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP),
+			() -> new Magical_Rod(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP).maxStackSize(toolStackSize),
 					Effects.STRENGTH, effectDurationMinor, 2));
 	public static final RegistryObject<Item> ROD_HASTE = ITEMS.register("rod_haste",
-			() -> new Magical_Rod(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP),
+			() -> new Magical_Rod(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP).maxStackSize(toolStackSize),
 					Effects.HASTE, effectDurationMinor, 1));
 	public static final RegistryObject<Item> ROD_WATER = ITEMS.register("rod_water",
-			() -> new Magical_Rod(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP),
+			() -> new Magical_Rod(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP).maxStackSize(toolStackSize),
 					Effects.WATER_BREATHING, effectDurationMinor, 0));
 	public static final RegistryObject<Item> ROD_SATURATION = ITEMS.register("rod_saturation",
-			() -> new Magical_Rod(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP),
+			() -> new Magical_Rod(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP).maxStackSize(toolStackSize),
 					Effects.SATURATION, 4, 0));
 	public static final RegistryObject<Item> ROD_SIGHT = ITEMS.register("rod_sight",
-			() -> new Magical_Rod(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP),
+			() -> new Magical_Rod(new Item.Properties().isImmuneToFire().group(MagicalItemGroup.GROUP).maxStackSize(toolStackSize),
 					Effects.NIGHT_VISION, effectDurationMinor, 0));
 	
 	public static void registerItems() {

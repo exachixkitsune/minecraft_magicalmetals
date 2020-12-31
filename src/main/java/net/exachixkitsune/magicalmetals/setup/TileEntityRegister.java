@@ -17,6 +17,13 @@ public class TileEntityRegister {
 	
 	public static final RegistryObject<TileEntityType<?>> BREAKINGBLOCK = TILE_ENTITIES.register("breaking_block",
 			() -> TileEntityTypes.BREAKINGBLOCKTILE);
+	
+	public static final RegistryObject<TileEntityType<?>> BUTTERFLYBOXTREE = TILE_ENTITIES.register("butterflybox_tree",
+			() -> TileEntityTypes.BUTTERFLYBOXTREETILE);
+	public static final RegistryObject<TileEntityType<?>> BUTTERFLYBOXCROP = TILE_ENTITIES.register("butterflybox_crop",
+			() -> TileEntityTypes.BUTTERFLYBOXCROPTILE);
+	public static final RegistryObject<TileEntityType<?>> BUTTERFLYBOXGRASS = TILE_ENTITIES.register("butterflybox_grass",
+			() -> TileEntityTypes.BUTTERFLYBOXGRASSTILE);
 		
 	public static void registerTileEntities() {
 		TILE_ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());

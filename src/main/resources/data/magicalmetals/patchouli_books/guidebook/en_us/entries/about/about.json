@@ -3,6 +3,7 @@
 	"icon": "magicalmetals:transmutation_anchor_adamant",
 	"category": "magicalmetals:about",
 	"priority": false,
+	"read_by_default": true,
 	"pages": [
 		{
 			"type": "link",

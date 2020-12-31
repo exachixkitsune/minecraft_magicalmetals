@@ -15,6 +15,9 @@
 	"block.magicalmetals.transmutation_anchor_greeniron": "Transmutation Anchor, Green Iron",
 	"block.magicalmetals.transmutation_anchor_luminousgold": "Transmutation Anchor, Luminous Gold",
 	"block.magicalmetals.breaking_block": "Breaking Block",
+	"block.magicalmetals.butterflybox_crop": "Butterfly Box (Crops)",
+	"block.magicalmetals.butterflybox_grass": "Butterfly Box (Grass)",
+	"block.magicalmetals.butterflybox_tree": "Butterfly Box (Tree)",
 	"item.magicalmetals.metal_starmetal_ingot": "Starmetal Ingot",
 	"item.magicalmetals.metal_purestarmetal_ingot": "Pure Starmetal Ingot",
 	"item.magicalmetals.metal_adamant_ingot": "Adamant Ingot",
@@ -32,5 +35,8 @@
 	"item.magicalmetals.rod_water": "Rod of Water Breath",
 	"item.magicalmetals.rod_saturation": "Rod of Saturation",
 	"item.magicalmetals.rod_sight": "Rod of Sight",
-	"item.magicalmetals.tiny_flag": "Tiny Flag"
+	"item.magicalmetals.tiny_flag": "Tiny Flag",
+	"entity.magicalmetals.butterfly_crop": "Butterfly (Crop)",
+	"entity.magicalmetals.butterfly_grass": "Butterfly (Grass)",
+	"entity.magicalmetals.butterfly_tree": "Butterfly (Tree)"
 }

@@ -3,9 +3,11 @@
 	"icon": "magicalmetals:metal_orichalcum_block",
 	"category": "magicalmetals:magical_metals",
 	"priority": true,
+	"read_by_default": true,
 	"pages": [
 		{
 			"type": "spotlight",
+			"title": "Orichalcum",
 			"item": "magicalmetals:metal_orichalcum_block",
 			"text": "Orichalcum is a merging of Iron and Gold. It is not inherently magical, but it can be transmuted into other magical metals using the $(l:transmutation/transmutation_matrix)Transmutation Matrix$()."
 		},

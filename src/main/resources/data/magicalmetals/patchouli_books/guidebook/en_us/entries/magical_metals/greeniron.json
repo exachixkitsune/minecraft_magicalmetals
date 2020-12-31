@@ -3,16 +3,23 @@
 	"icon": "magicalmetals:metal_greeniron_block",
 	"category": "magicalmetals:magical_metals",
 	"priority": false,
+	"read_by_default": true,
 	"pages": [
 		{
 			"type": "spotlight",
-			"item": "magicalmetals:metal_blueiron_block",
-			"text": "Green Iron is a resplendant material created in the $(l:transmutation/transmutation_matrix)Transmutation Matrix$().$(br2)It may be used as an unaspected focus for the $(l:transmutation/transmutation_matrix)Transmutation Matrix$()."
+			"title": "Green Iron",
+			"item": "magicalmetals:metal_greeniron_block",
+			"text": "Green Iron is a resplendant material created in the $(l:transmutation/transmutation_matrix)Transmutation Matrix$(). It is created in wet biomes.$(br2)It may be used as an unaspected focus for the $(l:transmutation/transmutation_matrix)Transmutation Matrix$()."
 		},
 		{
 			"type": "crafting",
 			"recipe": "magicalmetals:metals/metal_greeniron_block",
 			"recipe2": "magicalmetals:metals/metal_greeniron_ingot_craft"
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:enhancements/grassblock_greeniron",
+			"text": "Green Iron can also be used to create grass from dirt."
 		}
 	]
 }

@@ -3,19 +3,21 @@
 	"icon": "magicalmetals:metal_starmetal_block",
 	"category": "magicalmetals:magical_metals",
 	"priority": true,
+	"read_by_default": true,
 	"pages": [
 		{
 			"type": "empty"
 		},
 		{
 			"type": "spotlight",
+			"title": "Starmetal",
 			"item": "magicalmetals:metal_starmetal_block",
-			"text": "Starmetal is a rare material created deep in the earth. It is a foundational block for many magical components."
+			"text": "Starmetal is a foundational material for many magical components."
 		},
 		{
 			"type": "spotlight",
 			"item": "magicalmetals:ore_starmetal_block",
-			"text": "Starmetal ore should generate deep underground. Due to a number of interesting magical confluxes, it does not. However, it can be created from iron ore via a simple process involving the sheer force of will of the creator.$(br2)It may be smelted into ingots like all other ore."
+			"text": "Starmetal ore should generate deep underground. Due to a number of $(t:The mod author couldn't work out how to add it to world generation)interesting magical confluxes$(t), it does not. However, it can be created from iron ore via a simple process involving the sheer force of will of the creator.$(br2)It may be smelted into ingots like all other ore."
 		},
 		{
 			"type": "crafting",

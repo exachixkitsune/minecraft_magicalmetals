@@ -1,0 +1,26 @@
+{
+	"name": "Using Metals",
+	"icon": "magicalmetals:butterflybox_tree",
+	"category": "magicalmetals:getting_started",
+	"priority": false,
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "magicalmetals:butterflybox_tree",
+			"title": "Using Metals",
+			"text": "This section details the various uses of the magical metals."
+		},
+		{
+			"type": "spotlight",
+			"item": "magicalmetals:rod_dispel",
+			"title": "Rods",
+			"text": "Metal ingots may be used to create $(l:tools/rods)rods$() which can be used to bestow yourself or other players with potion effects."
+		},
+		{
+			"type": "spotlight",
+			"item": "magicalmetals:butterflybox_tree",
+			"title": "Butterfly Boxes",
+			"text": "$(l:functional_blocks/butterflyboxes)Butterfly Boxes$() create butterflies which then wander and grow plants."
+		}
+	]
+}

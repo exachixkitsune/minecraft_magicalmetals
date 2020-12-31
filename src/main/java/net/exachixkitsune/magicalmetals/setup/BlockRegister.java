@@ -102,6 +102,19 @@ public class BlockRegister {
 	public static final RegistryObject<Item> BREAKING_BLOCK_ITEM = ITEMS.register("breaking_block",
 			() -> new BlockItem(BREAKING_BLOCK.get(), baseProperties));
 	
+	public static final RegistryObject<Block> BUTTERFLYBOX_TREE = BLOCKS.register("butterflybox_tree",
+			() -> BlocksList.butterflybox_tree);
+	public static final RegistryObject<Item> BUTTERFLYBOX_TREE_ITEM = ITEMS.register("butterflybox_tree",
+			() -> new BlockItem(BUTTERFLYBOX_TREE.get(), baseProperties));
+	public static final RegistryObject<Block> BUTTERFLYBOX_CROP = BLOCKS.register("butterflybox_crop",
+			() -> BlocksList.butterflybox_crop);
+	public static final RegistryObject<Item> BUTTERFLYBOX_CROP_ITEM = ITEMS.register("butterflybox_crop",
+			() -> new BlockItem(BUTTERFLYBOX_CROP.get(), baseProperties));
+	public static final RegistryObject<Block> BUTTERFLYBOX_GRASS = BLOCKS.register("butterflybox_grass",
+			() -> BlocksList.butterflybox_grass);
+	public static final RegistryObject<Item> BUTTERFLYBOX_GRASS_ITEM = ITEMS.register("butterflybox_grass",
+			() -> new BlockItem(BUTTERFLYBOX_GRASS.get(), baseProperties));
+	
 	//public static final Block[] MachineArray = { TRANSMUATION_MATRIX_BLOCK.get() };
 	//public static final Set<Block> MachineSet = Collections.emptySortedSet().addAll(Arrays.asList(MachineArray));
 	
@@ -116,6 +129,9 @@ public class BlockRegister {
 		machineSet.add(TRANSMUATIONANCHOR_GREENIRON_BLOCK.get());
 		machineSet.add(TRANSMUATIONANCHOR_LUMINOUSGOLD_BLOCK.get());
 		machineSet.add(BREAKING_BLOCK.get());
+		machineSet.add(BUTTERFLYBOX_TREE.get());
+		machineSet.add(BUTTERFLYBOX_CROP.get());
+		machineSet.add(BUTTERFLYBOX_GRASS.get());
 		
 		return machineSet;
 	}

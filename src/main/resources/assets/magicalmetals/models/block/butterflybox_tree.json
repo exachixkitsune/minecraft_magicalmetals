@@ -1,0 +1,13 @@
+{
+    "parent": "block/cube",
+	"ambientocclusion": true,
+    "textures": {
+    	"down": "magicalmetals:block/butterflybox_bottom",
+    	"up": "magicalmetals:block/butterflybox_top",
+    	"north": "magicalmetals:block/butterflybox_tree_side",
+    	"south": "#north",
+    	"west": "#north",
+    	"east": "#north",
+		"particle": "#north"
+    }
+}

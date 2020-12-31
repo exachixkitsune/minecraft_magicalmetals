@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "magicalmetals:block/butterflybox_tree",
+      "uvlock": true
+    }
+  }
+}

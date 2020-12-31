@@ -1,0 +1,34 @@
+{
+	"name": "Butterfly Boxes",
+	"icon": "magicalmetals:butterflybox_tree",
+	"category": "magicalmetals:functional_blocks",
+	"priority": false,
+	"read_by_default": true,
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "magicalmetals:butterflybox_tree",
+			"text": "This category of blocks create a butterfly, which wanders around and pollinates a type of block.",
+			"title": "Butterfly Boxes"
+		},
+		{
+			"type": "text",
+			"text": "Each block creates one butterfly, and only when that butterfly dies, will it create a new one.$(br2)Each butterfly lasts for 5 minutes before expiring. The butterfly box will create a new butterfly at this point."
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:butterflybox_crop",
+			"text": "This box creates butterflies that seek out crops to grow."
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:butterflybox_grass",
+			"text": "This box creates butterflies that converts dirt to grass."
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:butterflybox_tree",
+			"text": "This box creates butterflies that seek out saplings to grow."
+		}
+    ]
+}

@@ -3,11 +3,12 @@
 	"icon": "magicalmetals:breaking_block",
 	"category": "magicalmetals:misc_items",
 	"priority": false,
+	"read_by_default": true,
 	"pages": [
 		{
 			"type": "spotlight",
 			"item": "magicalmetals:breaking_block",
-			"text": "The block can be activated by redstone. When it does so, it will break and the adjacent 'breaking blocks' will also be activated and break."
+			"text": "This block can be activated by redstone. When it does so, it will break and the adjacent 'breaking blocks' will also be activated and break."
 		},
 		{
 			"type": "crafting",

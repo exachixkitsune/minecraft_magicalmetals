@@ -3,6 +3,7 @@
 	"icon": "magicalmetals:transmutation_matrix",
 	"category": "magicalmetals:transmutation",
 	"priority": true,
+	"read_by_default": true,
 	"pages": [
 		{
 			"type": "spotlight",
@@ -15,7 +16,8 @@
 		},
 		{
 			"type": "text",
-			"text": "In order to use the transmutation matrix, two stabiliser blocks must be placed 3 blocks away on the vertical axis. Then, input blocks (orichalcum) must be placed opposite each other on a horizontal axis.$(br2)The space where blocks end up must be left empty.$(br)The two 'Anchor' blocks up and down may be of any magical material, or an $(l:transmutation_anchor)."
+			"anchor": "transmutationbasics",
+			"text": "In order to use the transmutation matrix, two stabiliser blocks must be placed 3 blocks away on the vertical axis. Then, input blocks (orichalcum) must be placed opposite each other on a horizontal axis.$(br2)The space where blocks end up must be left empty.$(br)The two 'Anchor' blocks up and down may be of any magical material, or a $(l:transmutation_anchor)Transmuation Anchor$()."
 		},
 		{
 			"type": "multiblock",
@@ -65,6 +67,7 @@
 		},
 		{
 			"type": "text",
+			"anchor": "transmutationbiome",
 			"text": "If the transmutation is performed deep underground (below y=30), the result is $(l:magical_metals/adamant)Adamant$().$(br2)If the transmutation is performed in a wet biome (River, Ocean, Swamp, or Beach), the result is $(l:magical_metals/greeniron)Green Iron$()."
 		},
 		{

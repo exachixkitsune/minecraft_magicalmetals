@@ -3,6 +3,7 @@
 	"icon": "magicalmetals:transmutation_anchor_pure",
 	"category": "magicalmetals:transmutation",
 	"priority": false,
+	"read_by_default": true,
 	"pages": [
 		{
 			"type": "spotlight",
@@ -17,26 +18,31 @@
 		{
 			"type": "crafting",
 			"recipe": "magicalmetals:transmutation/transmutation_anchor_pure",
+			"title": "Pure",
 			"text": "This anchor ensures an output is $(l:magical_metals/pure_starmetal)Pure Starmetal$()"
 		},
 		{
 			"type": "crafting",
 			"recipe": "magicalmetals:transmutation/transmutation_anchor_adamant",
+			"title": "Adamant",
 			"text": "This anchor ensures an output is $(l:magical_metals/adamant)Adamant$()"
 		},
 		{
 			"type": "crafting",
 			"recipe": "magicalmetals:transmutation/transmutation_anchor_blueiron",
+			"title": "Blue Iron",
 			"text": "This anchor ensures an output is $(l:magical_metals/blueiron)Blue Iron$()"
 		},
 		{
 			"type": "crafting",
 			"recipe": "magicalmetals:transmutation/transmutation_anchor_greeniron",
+			"title": "Green Iron",
 			"text": "This anchor ensures an output is $(l:magical_metals/greeniron)Green Iron$()"
 		},
 		{
 			"type": "crafting",
 			"recipe": "magicalmetals:transmutation/transmutation_anchor_luminousgold",
+			"title": "Luminous Gold",
 			"text": "This anchor ensures an output is $(l:magical_metals/luminousgold)Luminous Gold$()"
 		}
 	]
