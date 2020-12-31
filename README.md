@@ -22,6 +22,10 @@ This game jam ran during Desert Bus for Hope 2020, a charity drive stream for Ch
 See: https://desertbus.org
 
 # References
-Thanks to Botania (https://botaniamod.net/) for having an open source to look at and go "Hey, why does this thing not work."
+Thanks to Botania (https://botaniamod.net/) and Quark (https://quark.vazkii.net/) for having an open source to look at and go "Hey, why does this thing not work."
 
 Thanks to MinecraftByExample (https://github.com/TheGreyGhost/MinecraftByExample) for being an example-based tutorial of how to do things.
+
+Thanks to McJty's tutorial for various entity things (https://github.com/McJty/YouTubeModding14/blob/master/src/main/java/com/mcjty/)
+
+Thanks to Mystical World (https://github.com/MysticMods/MysticalWorld/blob/1.16/src/main/java/epicsquid/mysticalworld/) for other entity model things.
