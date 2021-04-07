@@ -28,15 +28,15 @@ public abstract class ButterflyBox_Tile extends TileEntity implements ITickableT
 	
 	// NBT Communication functionality
 	@Override
-	public CompoundNBT write(CompoundNBT compoundNBTData) {
-		compoundNBTData = super.write(compoundNBTData);
+	public CompoundNBT save(CompoundNBT compoundNBTData) {
+		compoundNBTData = super.save(compoundNBTData);
 		compoundNBTData.putInt(KEY_timerProcessing, TicksRemainingMakeButterfly);
 		compoundNBTData.putInt(KEY_butterflyID, thisButterflyID);
 		return compoundNBTData;
 	}
 	@Override
-	public void read(BlockState state, CompoundNBT compoundNBTData) {
-		super.read(state, compoundNBTData);
+	public void load(BlockState state, CompoundNBT compoundNBTData) {
+		super.load(state, compoundNBTData);
 		TicksRemainingMakeButterfly = compoundNBTData.getInt(KEY_timerProcessing);
 		thisButterflyID = compoundNBTData.getInt(KEY_butterflyID);
 	}
@@ -50,32 +50,32 @@ public abstract class ButterflyBox_Tile extends TileEntity implements ITickableT
 	
 	@Override
 	public void tick() {
-		if (!this.hasWorld()) return;  // prevent crash
-		World world = this.getWorld();
-		if (world.isRemote) return;   // don't bother doing anything on the client side.
+		if (!this.hasLevel()) return;  // prevent crash
+		World world = this.getLevel();
+		if (world.isClientSide()) return;   // don't bother doing anything on the client side.
 
 		// I was placed.
 		--TicksRemainingMakeButterfly;
 
 		if ((TicksRemainingMakeButterfly < 0)) {
 			// Check butterfly ID
-			Entity this_entity = world.getEntityByID(thisButterflyID);
+			Entity this_entity = world.getEntity(thisButterflyID);
 			if (this_entity == null || !(isMyButterfly(this_entity))) {
-				BlockPos myPos = this.getPos();
+				BlockPos myPos = this.getBlockPos();
 				// If we've got here, no butterflyID has been set.
 
 				// Make the butterfly
 				Butterfly_Entity this_butterfly = makeButterfly(world);
 
 				// Configure Butterfly
-				this_butterfly.setPosition(myPos.getX(), myPos.getY()+1, myPos.getZ());
+				this_butterfly.setPos(myPos.getX(), myPos.getY()+1, myPos.getZ());
 				this_butterfly.setHomePos(myPos);
-				world.addEntity(this_butterfly);
-				thisButterflyID = this_butterfly.getEntityId();
+				world.addFreshEntity(this_butterfly);
+				thisButterflyID = this_butterfly.getId();
 				// Set Tick
 				TicksRemainingMakeButterfly = TicksBetweenMakingButterfly;
 				// Set my dirtyness
-				this.markDirty();
+				this.setChanged();
 			}
 		}
 	}

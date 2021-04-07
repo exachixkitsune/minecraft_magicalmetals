@@ -18,21 +18,21 @@ public class ClientSetup {
 	
 	public static void init(final FMLClientSetupEvent event) {
 		// Block Rendering.
-		RenderTypeLookup.setRenderLayer(BlockRegister.STARMETAL_BLOCK.get(), RenderType.getSolid());
-		RenderTypeLookup.setRenderLayer(BlockRegister.PURESTARMETAL_BLOCK.get(), RenderType.getSolid());
-		RenderTypeLookup.setRenderLayer(BlockRegister.ADAMANT_BLOCK.get(), RenderType.getSolid());
-		RenderTypeLookup.setRenderLayer(BlockRegister.BLUEIRON_BLOCK.get(), RenderType.getSolid());
-		RenderTypeLookup.setRenderLayer(BlockRegister.GREENIRON_BLOCK.get(), RenderType.getSolid());
-		RenderTypeLookup.setRenderLayer(BlockRegister.LUMINOUSGOLD_BLOCK.get(), RenderType.getSolid());
-		RenderTypeLookup.setRenderLayer(BlockRegister.ORICHALCUM_BLOCK.get(), RenderType.getSolid());
-		RenderTypeLookup.setRenderLayer(BlockRegister.STARMETAL_ORE_BLOCK.get(), RenderType.getSolid());
-		RenderTypeLookup.setRenderLayer(BlockRegister.TRANSMUTATION_MATRIX_BLOCK.get(), RenderType.getSolid());
-		RenderTypeLookup.setRenderLayer(BlockRegister.TRANSMUATIONANCHOR_PURE_BLOCK.get(), RenderType.getSolid());
-		RenderTypeLookup.setRenderLayer(BlockRegister.TRANSMUATIONANCHOR_ADAMANT_BLOCK.get(), RenderType.getSolid());
-		RenderTypeLookup.setRenderLayer(BlockRegister.TRANSMUATIONANCHOR_BLUEIRON_BLOCK.get(), RenderType.getSolid());
-		RenderTypeLookup.setRenderLayer(BlockRegister.TRANSMUATIONANCHOR_GREENIRON_BLOCK.get(), RenderType.getSolid());
-		RenderTypeLookup.setRenderLayer(BlockRegister.TRANSMUATIONANCHOR_LUMINOUSGOLD_BLOCK.get(), RenderType.getSolid());
-		RenderTypeLookup.setRenderLayer(BlockRegister.BREAKING_BLOCK.get(), RenderType.getSolid());
+		RenderTypeLookup.setRenderLayer(BlockRegister.STARMETAL_BLOCK.get(), RenderType.solid());
+		RenderTypeLookup.setRenderLayer(BlockRegister.PURESTARMETAL_BLOCK.get(), RenderType.solid());
+		RenderTypeLookup.setRenderLayer(BlockRegister.ADAMANT_BLOCK.get(), RenderType.solid());
+		RenderTypeLookup.setRenderLayer(BlockRegister.BLUEIRON_BLOCK.get(), RenderType.solid());
+		RenderTypeLookup.setRenderLayer(BlockRegister.GREENIRON_BLOCK.get(), RenderType.solid());
+		RenderTypeLookup.setRenderLayer(BlockRegister.LUMINOUSGOLD_BLOCK.get(), RenderType.solid());
+		RenderTypeLookup.setRenderLayer(BlockRegister.ORICHALCUM_BLOCK.get(), RenderType.solid());
+		RenderTypeLookup.setRenderLayer(BlockRegister.STARMETAL_ORE_BLOCK.get(), RenderType.solid());
+		RenderTypeLookup.setRenderLayer(BlockRegister.TRANSMUTATION_MATRIX_BLOCK.get(), RenderType.solid());
+		RenderTypeLookup.setRenderLayer(BlockRegister.TRANSMUATIONANCHOR_PURE_BLOCK.get(), RenderType.solid());
+		RenderTypeLookup.setRenderLayer(BlockRegister.TRANSMUATIONANCHOR_ADAMANT_BLOCK.get(), RenderType.solid());
+		RenderTypeLookup.setRenderLayer(BlockRegister.TRANSMUATIONANCHOR_BLUEIRON_BLOCK.get(), RenderType.solid());
+		RenderTypeLookup.setRenderLayer(BlockRegister.TRANSMUATIONANCHOR_GREENIRON_BLOCK.get(), RenderType.solid());
+		RenderTypeLookup.setRenderLayer(BlockRegister.TRANSMUATIONANCHOR_LUMINOUSGOLD_BLOCK.get(), RenderType.solid());
+		RenderTypeLookup.setRenderLayer(BlockRegister.BREAKING_BLOCK.get(), RenderType.solid());
 		
 		// Entity Rendering Register
 		RenderingRegistry.registerEntityRenderingHandler(MobList.BUTTERFLY_TREE, Butterfly_Tree_Renderer::new);

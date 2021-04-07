@@ -25,7 +25,7 @@ public class BlockRegister {
 	
 	// Basic Stuff
 	private static final int maxStackSize = 64;
-	private static final Item.Properties baseProperties = new Item.Properties().maxStackSize(maxStackSize).group(MagicalItemGroup.GROUP);
+	private static final Item.Properties baseProperties = new Item.Properties().stacksTo(maxStackSize).tab(MagicalItemGroup.GROUP);
 	
 	// Standard metal's blocks
 	public static final RegistryObject<Block> STARMETAL_BLOCK = BLOCKS.register("metal_starmetal_block", 
@@ -36,34 +36,34 @@ public class BlockRegister {
 	public static final RegistryObject<Block> PURESTARMETAL_BLOCK = BLOCKS.register("metal_purestarmetal_block", 
 			() -> BlocksList.purestarmetal_block);
 	public static final RegistryObject<Item> PURESTARMETAL_BLOCK_ITEM = ITEMS.register("metal_purestarmetal_block",
-			() -> new BlockItem(PURESTARMETAL_BLOCK.get(), new Item.Properties().maxStackSize(maxStackSize).group(MagicalItemGroup.GROUP)));
+			() -> new BlockItem(PURESTARMETAL_BLOCK.get(), new Item.Properties().stacksTo(maxStackSize).tab(MagicalItemGroup.GROUP)));
 	
 	public static final RegistryObject<Block> ADAMANT_BLOCK = BLOCKS.register("metal_adamant_block", 
 			() -> BlocksList.adamant_block);
 	public static final RegistryObject<Item> ADAMANT_BLOCK_ITEM = ITEMS.register("metal_adamant_block",
-			() -> new BlockItem(ADAMANT_BLOCK.get(), new Item.Properties().maxStackSize(maxStackSize).group(MagicalItemGroup.GROUP)));
+			() -> new BlockItem(ADAMANT_BLOCK.get(), new Item.Properties().stacksTo(maxStackSize).tab(MagicalItemGroup.GROUP)));
 	public static final RegistryObject<Block> BLUEIRON_BLOCK = BLOCKS.register("metal_blueiron_block", 
 			() -> BlocksList.blueiron_block);
 	public static final RegistryObject<Item> BLUEIRON_BLOCK_ITEM = ITEMS.register("metal_blueiron_block",
-			() -> new BlockItem(BLUEIRON_BLOCK.get(), new Item.Properties().maxStackSize(maxStackSize).group(MagicalItemGroup.GROUP)));
+			() -> new BlockItem(BLUEIRON_BLOCK.get(), new Item.Properties().stacksTo(maxStackSize).tab(MagicalItemGroup.GROUP)));
 	public static final RegistryObject<Block> GREENIRON_BLOCK = BLOCKS.register("metal_greeniron_block", 
 			() -> BlocksList.greeniron_block);
 	public static final RegistryObject<Item> GREENIRON_BLOCK_ITEM = ITEMS.register("metal_greeniron_block",
-			() -> new BlockItem(GREENIRON_BLOCK.get(), new Item.Properties().maxStackSize(maxStackSize).group(MagicalItemGroup.GROUP)));
+			() -> new BlockItem(GREENIRON_BLOCK.get(), new Item.Properties().stacksTo(maxStackSize).tab(MagicalItemGroup.GROUP)));
 	public static final RegistryObject<Block> LUMINOUSGOLD_BLOCK = BLOCKS.register("metal_luminousgold_block", 
 			() -> BlocksList.luminousgold_block);
 	public static final RegistryObject<Item> LUMINOUSGOLD_BLOCK_ITEM = ITEMS.register("metal_luminousgold_block",
-			() -> new BlockItem(LUMINOUSGOLD_BLOCK.get(), new Item.Properties().maxStackSize(maxStackSize).group(MagicalItemGroup.GROUP)));
+			() -> new BlockItem(LUMINOUSGOLD_BLOCK.get(), new Item.Properties().stacksTo(maxStackSize).tab(MagicalItemGroup.GROUP)));
 	
 	// Nonmagical Metal Block
 	public static final RegistryObject<Block> ORICHALCUM_BLOCK = BLOCKS.register("metal_orichalcum_block", 
 			() -> BlocksList.orichalcum_block);
 	public static final RegistryObject<Item> ORICHALCUM_BLOCK_ITEM = ITEMS.register("metal_orichalcum_block",
-			() -> new BlockItem(ORICHALCUM_BLOCK.get(), new Item.Properties().maxStackSize(maxStackSize).group(MagicalItemGroup.GROUP)));
+			() -> new BlockItem(ORICHALCUM_BLOCK.get(), new Item.Properties().stacksTo(maxStackSize).tab(MagicalItemGroup.GROUP)));
 	
 	// Ore
 	public static final RegistryObject<Block> STARMETAL_ORE_BLOCK = BLOCKS.register("ore_starmetal_block", 
-			() -> new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.STONE).setRequiresTool()));
+			() -> new Block(AbstractBlock.Properties.of(Material.STONE, MaterialColor.STONE).requiresCorrectToolForDrops()));
 	public static final RegistryObject<Item> STARMETAL_ORE_BLOCK_ITEM = ITEMS.register("ore_starmetal_block",
 			() -> new BlockItem(STARMETAL_ORE_BLOCK.get(), baseProperties));
 	

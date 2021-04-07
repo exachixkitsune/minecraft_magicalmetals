@@ -20,7 +20,7 @@ public class Butterfly_Goal_Grass_FindDirt extends MoveToBlockGoal {
 	
 	@SuppressWarnings("deprecation")
 	@Override
-	protected boolean shouldMoveTo(IWorldReader worldIn, BlockPos checkLoc) {
+	protected boolean isValidTarget(IWorldReader worldIn, BlockPos checkLoc) {
 		// Is this dirt?
 		
 		Block checkBlock = worldIn.getBlockState(checkLoc).getBlock();
@@ -28,9 +28,9 @@ public class Butterfly_Goal_Grass_FindDirt extends MoveToBlockGoal {
 		if (checkBlock == Blocks.DIRT) {
 			
 			
-			if (worldIn.getBlockState(checkLoc.up()).isAir()) {
+			if (worldIn.getBlockState(checkLoc.above()).isAir()) {
 
-				Butterfly_Grass_Entity this_butterfly = (Butterfly_Grass_Entity)this.creature;
+				Butterfly_Grass_Entity this_butterfly = (Butterfly_Grass_Entity)this.mob;
 				this_butterfly.setTargetPos(checkLoc);
 				return true;
 			}

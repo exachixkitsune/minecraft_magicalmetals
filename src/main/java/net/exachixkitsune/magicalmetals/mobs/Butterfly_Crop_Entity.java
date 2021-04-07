@@ -25,18 +25,18 @@ public class Butterfly_Crop_Entity extends Butterfly_Entity {
 	protected void doPollinate(Block thisBlock, BlockState thisBlockState) {
 		if (thisBlock instanceof CropsBlock) {
 			CropsBlock thisCrop = (CropsBlock)thisBlock;
-			if (thisCrop.canGrow(world, targetPos, thisBlockState, world.isRemote())) {
+			if (thisCrop.isValidBonemealTarget(level, targetPos, thisBlockState, level.isClientSide())) {
 				// Grow the Sapling
-				thisCrop.grow((ServerWorld)world, rand, targetPos, thisBlockState);
+				thisCrop.performBonemeal((ServerWorld)level, random, targetPos, thisBlockState);
 				// Reset pollination
 				currentPollinateRecharge = pollinateRechargeMax;
 				currentPollinateCharge = pollinateChargeTime;
 			}
 		} else if (thisBlock instanceof StemBlock) {
 			StemBlock thisStem = (StemBlock)thisBlock;
-			if (thisStem.canGrow(world, targetPos, thisBlockState, world.isRemote())) {
+			if (thisStem.isValidBonemealTarget(level, targetPos, thisBlockState, level.isClientSide())) {
 				// Grow the Sapling
-				thisStem.grow((ServerWorld)world, rand, targetPos, thisBlockState);
+				thisStem.performBonemeal((ServerWorld)level, random, targetPos, thisBlockState);
 				// Reset pollination
 				currentPollinateRecharge = pollinateRechargeMax;
 				currentPollinateCharge = pollinateChargeTime;

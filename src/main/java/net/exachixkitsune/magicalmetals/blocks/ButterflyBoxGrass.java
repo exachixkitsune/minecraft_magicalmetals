@@ -29,9 +29,9 @@ public class ButterflyBoxGrass extends Block {
 	}
 	
 	@Override
-	public void onBlockPlacedBy(World world_in, BlockPos pos_in, BlockState state_in, LivingEntity livingEntity_in, ItemStack itemStack_in) {
-		super.onBlockPlacedBy(world_in, pos_in, state_in, livingEntity_in, itemStack_in);
-		TileEntity tileentity = world_in.getTileEntity(pos_in);
+	public void setPlacedBy(World world_in, BlockPos pos_in, BlockState state_in, LivingEntity livingEntity_in, ItemStack itemStack_in) {
+		super.setPlacedBy(world_in, pos_in, state_in, livingEntity_in, itemStack_in);
+		TileEntity tileentity = world_in.getBlockEntity(pos_in);
 		if (tileentity instanceof ButterflyBoxFlower_Tile) { // prevent a crash if not the right type, or is null
 			ButterflyBoxFlower_Tile tileEntityData = (ButterflyBoxFlower_Tile)tileentity;
 			tileEntityData.setup();

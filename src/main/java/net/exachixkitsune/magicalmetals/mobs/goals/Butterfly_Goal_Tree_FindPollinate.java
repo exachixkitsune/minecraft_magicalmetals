@@ -21,17 +21,17 @@ public class Butterfly_Goal_Tree_FindPollinate extends MoveToBlockGoal {
 	
 	@SuppressWarnings("deprecation")
 	@Override
-	protected boolean shouldMoveTo(IWorldReader worldIn, BlockPos pos) {
+	protected boolean isValidTarget(IWorldReader worldIn, BlockPos pos) {
 		// Is this position next to a sapling
 		//Block thisBlock = worldIn.getBlockState(pos).getBlock();
 		//return (thisBlock instanceof SaplingBlock);
 		BlockState thisBlockState = worldIn.getBlockState(pos);
-		if (thisBlockState.isAir()) {
+		if (thisBlockState.isAir(worldIn, pos)) {
 			BlockPos[] checkLocations = {pos.north(), pos.south(), pos.east(), pos.west()};
 			for (BlockPos checkLoc : checkLocations) {
 				Block checkBlock = worldIn.getBlockState(checkLoc).getBlock();
 				if (checkBlock instanceof SaplingBlock) {
-					Butterfly_Tree_Entity this_butterfly = (Butterfly_Tree_Entity)this.creature;
+					Butterfly_Tree_Entity this_butterfly = (Butterfly_Tree_Entity)this.mob;
 					this_butterfly.setTargetPos(checkLoc);
 					return true;
 				}

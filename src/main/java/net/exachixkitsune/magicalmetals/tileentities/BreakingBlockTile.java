@@ -31,15 +31,15 @@ public class BreakingBlockTile extends TileEntity implements ITickableTileEntity
 	
 	// NBT Communication functionality
 	@Override
-	public CompoundNBT write(CompoundNBT compoundNBTData) {
-		compoundNBTData = super.write(compoundNBTData);
+	public CompoundNBT save(CompoundNBT compoundNBTData) {
+		compoundNBTData = super.save(compoundNBTData);
 		compoundNBTData.putInt(KEY_timerProcessing, TicksRemainingProcessing);
 		return compoundNBTData;
 	}
 	@Override
-	public void read(BlockState state, CompoundNBT compoundNBTData) {
+	public void load(BlockState state, CompoundNBT compoundNBTData) {
 		// I think this is "read"
-		super.read(state, compoundNBTData);
+		super.load(state, compoundNBTData);
 		TicksRemainingProcessing = compoundNBTData.getInt(KEY_timerProcessing);
 	}
 	
@@ -52,24 +52,24 @@ public class BreakingBlockTile extends TileEntity implements ITickableTileEntity
 
 	@Override
 	public void tick() {
-		if (!this.hasWorld()) return;  // prevent crash
-		World world = this.getWorld();
-		if (world.isRemote) return;   // don't bother doing anything on the client side.
+		if (!this.hasLevel()) return;  // prevent crash
+		World world = this.getLevel();
+		if (world.isClientSide()) return;   // don't bother doing anything on the client side.
 		
 		// So;
 		//   If Powered: do the check if can process
-		if (this.getBlockState().get(BreakingBlock.POWERED)) {
+		if (this.getBlockState().getValue(BreakingBlock.POWERED)) {
 			// If no processing has happened yet - TickRemainingProcess will be at full
 			if (TicksRemainingProcessing == (TicksToProcess-TicksDelay)) {
 				// Render adjacent blocks to be powered
-				BlockPos position = this.getPos();
-				BlockPos[] stepPositions = {position.up(), position.down(), position.north(), position.south(), position.east(), position.west()};
+				BlockPos position = this.getBlockPos();
+				BlockPos[] stepPositions = {position.above(), position.below(), position.north(), position.south(), position.east(), position.west()};
 				for (BlockPos stepPosition : stepPositions) {
 					// Update all blocks around, make them powered. IF they are a BreakingBlock.
 					BlockState stepBlock = world.getBlockState(stepPosition);
 					if ((stepBlock.getBlock() instanceof BreakingBlock) &&
-							!stepBlock.get(BreakingBlock.POWERED)) {
-						world.setBlockState(stepPosition, stepBlock.with(BreakingBlock.POWERED, true));
+							!stepBlock.getValue(BreakingBlock.POWERED)) {
+						world.setBlockAndUpdate(stepPosition, stepBlock.setValue(BreakingBlock.POWERED, true));
 					}
 				}
 			}
@@ -79,8 +79,8 @@ public class BreakingBlockTile extends TileEntity implements ITickableTileEntity
 			// Ticks incomplete? Return
 			if (TicksRemainingProcessing > 0)  return;
 			// Destroy self
-			world.destroyBlock(this.getPos(), false);
-			world.removeTileEntity(this.getPos());
+			world.destroyBlock(this.getBlockPos(), true);
+			world.removeBlockEntity(this.getBlockPos());
 		}
 	}
 

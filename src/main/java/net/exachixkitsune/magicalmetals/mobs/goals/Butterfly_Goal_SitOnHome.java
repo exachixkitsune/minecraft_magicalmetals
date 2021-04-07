@@ -19,11 +19,11 @@ public class Butterfly_Goal_SitOnHome extends MoveToBlockGoal {
 	}
 
 	@Override
-	protected boolean shouldMoveTo(IWorldReader worldIn, BlockPos pos) {
+	protected boolean isValidTarget(IWorldReader worldIn, BlockPos pos) {
 		// Should only move home if pos is homePos.
-		if (this.creature instanceof Butterfly_Tree_Entity) {
-			Butterfly_Tree_Entity temp_creature = (Butterfly_Tree_Entity)this.creature;
-			BlockPos homePos = temp_creature.getHomePosition();
+		if (this.mob instanceof Butterfly_Tree_Entity) {
+			Butterfly_Tree_Entity temp_creature = (Butterfly_Tree_Entity)this.mob;
+			BlockPos homePos = temp_creature.getRestrictCenter();
 			return (homePos.getX() == pos.getX() &&
 					homePos.getY() == pos.getY() &&
 					homePos.getZ() == pos.getZ());

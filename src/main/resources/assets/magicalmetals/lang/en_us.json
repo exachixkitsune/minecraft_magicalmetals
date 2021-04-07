@@ -7,17 +7,27 @@
 	"block.magicalmetals.metal_greeniron_block": "Green Iron Block",
 	"block.magicalmetals.metal_luminousgold_block": "Luminous Gold Block",
 	"block.magicalmetals.metal_orichalcum_block": "Orichalcum Block",
+	
+	"block.magicalmetals.metal_purestarmetal_block.jei": "Pure Starmetal is created in a variety of locations, using the Transmuation Matrix. For more information see the magical metals guidebook.",
+	"block.magicalmetals.metal_adamant_block.jei": "Adamant is created using the Transmutation Matrix from Orichalcum blocks below y-level 30. For more information see the magical metals guidebook.",
+	"block.magicalmetals.metal_blueiron_block.jei": "Blue Iron is created using the Transmutation Matrix from Orichalcum blocks in cold biomes. For more information see the magical metals guidebook.",
+	"block.magicalmetals.metal_greeniron_block.jei": "Green Iron is created using the Transmutation Matrix from Orichalcum blocks in wet biomes like rivers and oceans. For more information see the magical metals guidebook.",
+	"block.magicalmetals.metal_luminousgold_block.jei": "Luminous Gold is created using the Transmutation Matrix from Orichalcum blocks in hot biomes. For more information see the magical metals guidebook.",
+	
 	"block.magicalmetals.ore_starmetal_block": "Starmetal Ore",
+	
 	"block.magicalmetals.transmutation_matrix": "Transmutation Matrix",
 	"block.magicalmetals.transmutation_anchor_pure": "Transmutation Anchor, Pure Starmetal",
 	"block.magicalmetals.transmutation_anchor_adamant": "Transmutation Anchor, Adamant",
 	"block.magicalmetals.transmutation_anchor_blueiron": "Transmutation Anchor, Blue Iron",
 	"block.magicalmetals.transmutation_anchor_greeniron": "Transmutation Anchor, Green Iron",
 	"block.magicalmetals.transmutation_anchor_luminousgold": "Transmutation Anchor, Luminous Gold",
+	
 	"block.magicalmetals.breaking_block": "Breaking Block",
 	"block.magicalmetals.butterflybox_crop": "Butterfly Box (Crops)",
 	"block.magicalmetals.butterflybox_grass": "Butterfly Box (Grass)",
 	"block.magicalmetals.butterflybox_tree": "Butterfly Box (Tree)",
+	
 	"item.magicalmetals.metal_starmetal_ingot": "Starmetal Ingot",
 	"item.magicalmetals.metal_purestarmetal_ingot": "Pure Starmetal Ingot",
 	"item.magicalmetals.metal_adamant_ingot": "Adamant Ingot",
@@ -25,6 +35,8 @@
 	"item.magicalmetals.metal_greeniron_ingot": "Green Iron Ingot",
 	"item.magicalmetals.metal_luminousgold_ingot": "Luminous Gold Ingot",
 	"item.magicalmetals.metal_orichalcum_ingot": "Orichalcum Ingot",
+	
+	"item.magicalmetals.purifying_dust": "Purifying Dust",
 	"item.magicalmetals.rod_component": "Rod Base",
 	"item.magicalmetals.rod_dispel": "Rod of Silence",
 	"item.magicalmetals.rod_heal": "Rod of Healing",
@@ -35,8 +47,20 @@
 	"item.magicalmetals.rod_water": "Rod of Water Breath",
 	"item.magicalmetals.rod_saturation": "Rod of Saturation",
 	"item.magicalmetals.rod_sight": "Rod of Sight",
+	"item.magicalmetals.rod_fireresist": "Rod of Flame Resist",
+	
+	"item.magicalmetals.battle_hoe" : "Battle Hoe",
+	
 	"item.magicalmetals.tiny_flag": "Tiny Flag",
+	
 	"entity.magicalmetals.butterfly_crop": "Butterfly (Crop)",
 	"entity.magicalmetals.butterfly_grass": "Butterfly (Grass)",
-	"entity.magicalmetals.butterfly_tree": "Butterfly (Tree)"
+	"entity.magicalmetals.butterfly_tree": "Butterfly (Tree)",
+	
+	"magicalmetals.transmutationmsg.base": "This biome makes: ",
+	"magicalmetals.purestarmetal": "Pure Starmetal",
+	"magicalmetals.adamant": "Adamant",
+	"magicalmetals.greeniron": "Green Iron",
+	"magicalmetals.blueiron": "Blue Iron",
+	"magicalmetals.luminousgold": "Luminous Gold"
 }

@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"CSC",
+		"SRS",
+		"CSC" ],
+	"key": {
+		"S": { "item": "minecraft:sugar"},
+		"C": { "tag": "minecraft:coals"},
+		"R": { "item": "minecraft:redstone"}
+	},
+	"result": {
+		"item": "magicalmetals:purifying_dust",
+		"count": 8
+	}
+}

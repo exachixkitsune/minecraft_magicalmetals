@@ -16,7 +16,7 @@ public class Butterfly_Crop_Renderer extends MobRenderer<Butterfly_Crop_Entity, 
 	}
 
 	@Override
-	public ResourceLocation getEntityTexture(Butterfly_Crop_Entity entity) {
+	public ResourceLocation getTextureLocation(Butterfly_Crop_Entity entity) {
 		return TEXTURE;
 	}
 

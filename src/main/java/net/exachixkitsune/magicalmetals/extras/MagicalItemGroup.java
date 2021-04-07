@@ -13,11 +13,11 @@ public class MagicalItemGroup extends ItemGroup {
 	
 	public MagicalItemGroup() {
 		super(MagicalMetals.MODID);
-		setNoTitle();
+		hideTitle();
 	}
 
 	@Override
-	public ItemStack createIcon() {
+	public ItemStack makeIcon() {
 		return new ItemStack(ItemRegister.PURESTARMETAL_INGOT_ITEM.get());
 	}
 	

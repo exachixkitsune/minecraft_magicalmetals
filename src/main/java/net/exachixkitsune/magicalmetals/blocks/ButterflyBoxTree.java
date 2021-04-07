@@ -27,11 +27,11 @@ public class ButterflyBoxTree extends Block {
 	public TileEntity createTileEntity(BlockState state, IBlockReader world) {
 		return new ButterflyBoxTree_Tile();
 	}
-	
+
 	@Override
-	public void onBlockPlacedBy(World world_in, BlockPos pos_in, BlockState state_in, LivingEntity livingEntity_in, ItemStack itemStack_in) {
-		super.onBlockPlacedBy(world_in, pos_in, state_in, livingEntity_in, itemStack_in);
-		TileEntity tileentity = world_in.getTileEntity(pos_in);
+	public void setPlacedBy(World world_in, BlockPos pos_in, BlockState state_in, LivingEntity livingEntity_in, ItemStack itemStack_in) {
+		super.setPlacedBy(world_in, pos_in, state_in, livingEntity_in, itemStack_in);
+		TileEntity tileentity = world_in.getBlockEntity(pos_in);
 		if (tileentity instanceof ButterflyBoxTree_Tile) { // prevent a crash if not the right type, or is null
 			ButterflyBoxTree_Tile tileEntityData = (ButterflyBoxTree_Tile)tileentity;
 			tileEntityData.setup();

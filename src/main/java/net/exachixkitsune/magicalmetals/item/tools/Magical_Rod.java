@@ -34,29 +34,29 @@ public class Magical_Rod extends ToolItem {
 	
 	// Right-click uses tool on self
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand) {
+	public ActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
 		// Basically, hit self with it.
 		// This item
-		ItemStack thisItemStack = player.getHeldItem(hand);
+		ItemStack thisItemStack = player.getItemInHand(hand);
 		// Do a hit
-		hitEntity(thisItemStack, player, player);
+		hurtEnemy(thisItemStack, player, player);
 		// Return
-		return super.onItemRightClick(world, player, hand);
+		return super.use(world, player, hand);
 	}
 	
 	// Yes you can use this tool on an entity
 	@Override
-	public ActionResultType itemInteractionForEntity(ItemStack stack, PlayerEntity player, LivingEntity target, Hand hand) {
+	public ActionResultType interactLivingEntity(ItemStack stack, PlayerEntity player, LivingEntity target, Hand hand) {
 		return ActionResultType.SUCCESS;
 	}
 	
 	@Override
-	public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+	public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
 		// Compensate for damage
 		//target.heal(1);
 		// Apply effect
-		target.addPotionEffect(new EffectInstance(this.RodEffect, this.EffectDuration, this.EffectPower));
-		return super.hitEntity(stack, target, attacker);
+		target.addEffect(new EffectInstance(this.RodEffect, this.EffectDuration, this.EffectPower));
+		return super.hurtEnemy(stack, target, attacker);
 	}
 	
 	

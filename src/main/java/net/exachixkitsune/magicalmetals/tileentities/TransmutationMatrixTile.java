@@ -2,6 +2,7 @@ package net.exachixkitsune.magicalmetals.tileentities;
 
 import net.exachixkitsune.magicalmetals.blocks.MagicalFocusBlock;
 import net.exachixkitsune.magicalmetals.blocks.transmutation.TransmutationMatrix;
+import net.exachixkitsune.magicalmetals.util.ConvertMode;
 import net.exachixkitsune.magicalmetals.blocks.transmutation.TransmutationAnchor;
 import net.exachixkitsune.magicalmetals.blocks.BlocksList;
 import net.minecraft.tileentity.ITickableTileEntity;
@@ -9,7 +10,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.biome.Biome;
 
 import net.minecraft.block.*;
 import net.minecraft.world.World;
@@ -39,15 +39,15 @@ public class TransmutationMatrixTile extends TileEntity implements ITickableTile
 	
 	// NBT Communication functionality
 	@Override
-	public CompoundNBT write(CompoundNBT compoundNBTData) {
-		compoundNBTData = super.write(compoundNBTData);
+	public CompoundNBT save(CompoundNBT compoundNBTData) {
+		compoundNBTData = super.save(compoundNBTData);
 		compoundNBTData.putInt(KEY_timerProcessing, TicksRemainingProcessing);
 		return compoundNBTData;
 	}
 	@Override
-	public void read(BlockState state, CompoundNBT compoundNBTData) {
+	public void load(BlockState state, CompoundNBT compoundNBTData) {
 		// I think this is "read"
-		super.read(state, compoundNBTData);
+		super.load(state, compoundNBTData);
 		TicksRemainingProcessing = compoundNBTData.getInt(KEY_timerProcessing);
 	}
 	
@@ -60,13 +60,13 @@ public class TransmutationMatrixTile extends TileEntity implements ITickableTile
 
 	@Override
 	public void tick() {
-		if (!this.hasWorld()) return;  // prevent crash
-		World world = this.getWorld();
-		if (world.isRemote) return;   // don't bother doing anything on the client side.
+		if (!this.hasLevel()) return;  // prevent crash
+		World world = this.getLevel();
+		if (world.isClientSide()) return;   // don't bother doing anything on the client side.
 		
 		// So;
 		//   If Powered: do the check if can process
-		if (this.getBlockState().get(TransmutationMatrix.POWERED)) {
+		if (this.getBlockState().getValue(TransmutationMatrix.POWERED)) {
 			--TicksRemainingProcessing;
 			// Ticks incomplete? Return
 			if (TicksRemainingProcessing > 0)  return;
@@ -79,31 +79,31 @@ public class TransmutationMatrixTile extends TileEntity implements ITickableTile
 	}
 	
 	private boolean checkConfigurationStatus() {
-		World world = this.getWorld();
-		BlockPos myPos = this.getPos();
+		World world = this.getLevel();
+		BlockPos myPos = this.getBlockPos();
 		
 		boolean output = false;
 		
 		// Check
-		BlockPos upPos = myPos.add(0, blockCheckDistance, 0);
-		BlockPos downPos = myPos.add(0, -1*blockCheckDistance, 0);
+		BlockPos upPos = myPos.offset(0, blockCheckDistance, 0);
+		BlockPos downPos = myPos.offset(0, -1*blockCheckDistance, 0);
 		if ((world.getBlockState(upPos).getBlock() instanceof MagicalFocusBlock) && 
 				(world.getBlockState(downPos).getBlock() instanceof MagicalFocusBlock)) {
 			// Both blocks are the magical blocks.
 			// Further check - are there source blocks/inventories in the right place
 			// Each direction is independent, but if there's air in two directions, need valid blocks in the other.
-			BlockPos EastPos = myPos.add(blockCheckDistance, 0, 0);
-			BlockPos WestPos = myPos.add(-1*blockCheckDistance, 0, 0);
-			BlockPos SouthPos = myPos.add(0, 0, blockCheckDistance);
-			BlockPos NorthPos = myPos.add(0, 0, -1*blockCheckDistance);
+			BlockPos EastPos = myPos.offset(blockCheckDistance, 0, 0);
+			BlockPos WestPos = myPos.offset(-1*blockCheckDistance, 0, 0);
+			BlockPos SouthPos = myPos.offset(0, 0, blockCheckDistance);
+			BlockPos NorthPos = myPos.offset(0, 0, -1*blockCheckDistance);
 			// If East/West are Air, check South/North
 			// If South/North are Air, check East/West
 			// Are the two aligned elements Orichalcum?
-			if (world.isAirBlock(EastPos) && world.isAirBlock(WestPos)) {
+			if (world.isEmptyBlock(EastPos) && world.isEmptyBlock(WestPos)) {
 				output = (validSourceBlock(world,NorthPos) && 
 						validSourceBlock(world,SouthPos));
 			}
-			else if (world.isAirBlock(SouthPos) && world.isAirBlock(NorthPos)) {
+			else if (world.isEmptyBlock(SouthPos) && world.isEmptyBlock(NorthPos)) {
 				output = (validSourceBlock(world,EastPos) && 
 						validSourceBlock(world,WestPos));
 			}
@@ -135,15 +135,15 @@ public class TransmutationMatrixTile extends TileEntity implements ITickableTile
 		// Defaults
 		Block blocktomake_1 = null;
 		Block blocktomake_2 = null;
-		BlockPos myPos = this.getPos();
+		BlockPos myPos = this.getBlockPos();
 		
 		
-		BlockPos eastPos = myPos.add(blockCheckDistance, 0, 0);
-		BlockPos westPos = myPos.add(-1*blockCheckDistance, 0, 0);
-		BlockPos southPos = myPos.add(0, 0, blockCheckDistance);
-		BlockPos northPos = myPos.add(0, 0, -1*blockCheckDistance);
-		BlockPos upPos = myPos.add(0, blockCheckDistance, 0);
-		BlockPos downPos = myPos.add(0, -1*blockCheckDistance, 0);
+		BlockPos eastPos = myPos.offset(blockCheckDistance, 0, 0);
+		BlockPos westPos = myPos.offset(-1*blockCheckDistance, 0, 0);
+		BlockPos southPos = myPos.offset(0, 0, blockCheckDistance);
+		BlockPos northPos = myPos.offset(0, 0, -1*blockCheckDistance);
+		BlockPos upPos = myPos.offset(0, blockCheckDistance, 0);
+		BlockPos downPos = myPos.offset(0, -1*blockCheckDistance, 0);
 		
 		// Set East/South
 		Block upBlock = world.getBlockState(upPos).getBlock();
@@ -162,52 +162,30 @@ public class TransmutationMatrixTile extends TileEntity implements ITickableTile
 		// By Default, output block is Pure Starmetal
 		// By Biome
 		if ((blocktomake_1 == null) || (blocktomake_2 == null)) {
-			Block fromBiome = BlocksList.purestarmetal_block;
-			if (myPos.getY() < 30) {
-				fromBiome = BlocksList.adamant_block;
-			}
-			else {
-				Biome myBiome = world.getBiome(myPos);
-				if ((myBiome.getCategory() == Biome.Category.BEACH) ||
-						(myBiome.getCategory() == Biome.Category.RIVER)  ||
-						(myBiome.getCategory() == Biome.Category.OCEAN)||
-						(myBiome.getCategory() == Biome.Category.SWAMP)) {
-					fromBiome = BlocksList.greeniron_block;
-				}
-				else {
-					float myTemperature = myBiome.getTemperature(myPos);
-					if (myTemperature <= 0.3) {
-						fromBiome = BlocksList.blueiron_block;
-					}
-					else if (myTemperature >= 1.0) {
-						fromBiome = BlocksList.luminousgold_block;
-					}
-				}
-			}
+			Block fromBiome = ConvertMode.determineConvertTo(world, myPos).getConvertTo_Block();
 			if (blocktomake_1 == null) { blocktomake_1 = fromBiome; };
 			if (blocktomake_2 == null) { blocktomake_2 = fromBiome; };
 		}
 
 		// Fully Check that everything is good, otherwise don't change.
-		if (world.isAirBlock(eastPos) && world.isAirBlock(westPos) &&
+		if (world.isEmptyBlock(eastPos) && world.isEmptyBlock(westPos) &&
 				validSourceBlock(world,southPos) && 
 				validSourceBlock(world,northPos)) {
 			// TODO: Expand to deal with inventories too
 			world.destroyBlock(southPos, false);
 			world.destroyBlock(northPos, false);
-			world.setBlockState(eastPos, blocktomake_1.getDefaultState());
-			world.setBlockState(westPos, blocktomake_2.getDefaultState());
+			world.setBlockAndUpdate(eastPos, blocktomake_1.defaultBlockState());
+			world.setBlockAndUpdate(westPos, blocktomake_2.defaultBlockState());
 		}
-		else if (world.isAirBlock(southPos) && world.isAirBlock(northPos) &&
+		else if (world.isEmptyBlock(southPos) && world.isEmptyBlock(northPos) &&
 				validSourceBlock(world,eastPos) && 
 				validSourceBlock(world,westPos)) {
 			// TODO: Expand to deal with inventories too
 			world.destroyBlock(eastPos, false);
 			world.destroyBlock(westPos, false);
-			world.setBlockState(southPos, blocktomake_1.getDefaultState());
-			world.setBlockState(northPos, blocktomake_2.getDefaultState());
+			world.setBlockAndUpdate(southPos, blocktomake_1.defaultBlockState());
+			world.setBlockAndUpdate(northPos, blocktomake_2.defaultBlockState());
 		}
 	}
-
-
+	
 }

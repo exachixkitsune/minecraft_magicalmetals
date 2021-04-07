@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{"item": "minecraft:tropical_fish"},
+		{"item": "minecraft:water_bucket"},
+		{"item": "magicalmetals:metal_greeniron_ingot"}
+	],
+	"result": {
+		"item": "minecraft:tropical_fish_bucket",
+		"count": 1
+	}
+}

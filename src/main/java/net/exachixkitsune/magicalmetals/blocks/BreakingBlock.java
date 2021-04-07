@@ -23,37 +23,37 @@ public class BreakingBlock extends Block {
 	
 	public BreakingBlock(AbstractBlock.Properties properties) {
 		super(properties);
-		this.setDefaultState(this.getDefaultState()
-				.with(POWERED, false));
+		this.registerDefaultState(this.defaultBlockState()
+				.setValue(POWERED, false));
 	}
 
 	@Override
-	protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
+	protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> builder) {
 		builder.add(POWERED);
 	}
 	
 	@Nullable
 	@Override
 	public BlockState getStateForPlacement(BlockItemUseContext context) {
-		BlockPos pos = context.getPos();
-		World world = context.getWorld();
-		BlockState blockState = setPoweredState(this.getDefaultState(), world, pos);
+		BlockPos pos = context.getClickedPos();
+		World world = context.getLevel();
+		BlockState blockState = setPoweredState(this.defaultBlockState(), world, pos);
 		return blockState;
 	}
 	
 	// Update powered information when a block nearby is updated
 	@Override
 	public void neighborChanged(BlockState currentState, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos, boolean isMoving) {
-		worldIn.setBlockState(pos, setPoweredState(currentState, worldIn, pos));
+		worldIn.setBlockAndUpdate(pos, setPoweredState(currentState, worldIn, pos));
 	}
 	
 	// What to do when setting powered state
 	public BlockState setPoweredState(BlockState currentState, World worldIn, BlockPos pos) {
 		// If already powered, don't make unpowered
-		if (currentState.get(POWERED)) return currentState;
+		if (currentState.getValue(POWERED)) return currentState;
 		// Obtain power level from each direction
-		int powerlevel = worldIn.getRedstonePowerFromNeighbors(pos);
-		return currentState.with(POWERED, powerlevel>0);
+		int powerlevel = worldIn.getDirectSignalTo(pos);
+		return currentState.setValue(POWERED, powerlevel>0);
 	}
 
 	@Override
@@ -70,9 +70,9 @@ public class BreakingBlock extends Block {
 	// Copied from https://github.com/TheGreyGhost/MinecraftByExample/ - lightly modified
 	// Called just after the player places a block.  Start the tileEntity's timer
 	@Override
-	public void onBlockPlacedBy(World worldIn, BlockPos pos, BlockState state, LivingEntity placer, ItemStack stack) {
-		super.onBlockPlacedBy(worldIn, pos, state, placer, stack);
-		TileEntity tileentity = worldIn.getTileEntity(pos);
+	public void setPlacedBy(World worldIn, BlockPos pos, BlockState state, LivingEntity placer, ItemStack stack) {
+		super.setPlacedBy(worldIn, pos, state, placer, stack);
+		TileEntity tileentity = worldIn.getBlockEntity(pos);
 		if (tileentity instanceof BreakingBlockTile) { // prevent a crash if not the right type, or is null
 			BreakingBlockTile tileEntityData = (BreakingBlockTile)tileentity;
 			tileEntityData.setup();

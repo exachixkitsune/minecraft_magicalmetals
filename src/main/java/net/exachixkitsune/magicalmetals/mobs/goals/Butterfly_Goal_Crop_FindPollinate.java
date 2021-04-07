@@ -20,24 +20,24 @@ public class Butterfly_Goal_Crop_FindPollinate extends MoveToBlockGoal {
 	}
 	
 	@Override
-	protected boolean shouldMoveTo(IWorldReader worldIn, BlockPos checkLoc) {
+	protected boolean isValidTarget(IWorldReader worldIn, BlockPos checkLoc) {
 		// Is this a crop?
 		
 		Block checkBlock = worldIn.getBlockState(checkLoc).getBlock();
 
 		if (checkBlock instanceof CropsBlock) {
 			CropsBlock checkBlockCrop = (CropsBlock)checkBlock;
-			if (checkBlockCrop.canGrow(worldIn, checkLoc, worldIn.getBlockState(checkLoc), worldIn.isRemote())) {
+			if (checkBlockCrop.isValidBonemealTarget(worldIn, checkLoc, worldIn.getBlockState(checkLoc), worldIn.isClientSide())) {
 
-				Butterfly_Crop_Entity this_butterfly = (Butterfly_Crop_Entity)this.creature;
+				Butterfly_Crop_Entity this_butterfly = (Butterfly_Crop_Entity)this.mob;
 				this_butterfly.setTargetPos(checkLoc);
 				return true;
 			}
 		} else if (checkBlock instanceof StemBlock) {
 			StemBlock checkBlockStem = (StemBlock)checkBlock;
-			if (checkBlockStem.canGrow(worldIn, checkLoc, worldIn.getBlockState(checkLoc), worldIn.isRemote())) {
+			if (checkBlockStem.isValidBonemealTarget(worldIn, checkLoc, worldIn.getBlockState(checkLoc), worldIn.isClientSide())) {
 
-				Butterfly_Crop_Entity this_butterfly = (Butterfly_Crop_Entity)this.creature;
+				Butterfly_Crop_Entity this_butterfly = (Butterfly_Crop_Entity)this.mob;
 				this_butterfly.setTargetPos(checkLoc);
 				return true;
 			}

@@ -9,15 +9,15 @@ public class TileEntityTypes {
 	private TileEntityTypes() {}
 	
 	public static final TileEntityType<TransmutationMatrixTile> TRANSMUTATIONMATRIXTILE
-		= TileEntityType.Builder.create(TransmutationMatrixTile::new, transmutation_matrix).build(null);
+		= TileEntityType.Builder.of(TransmutationMatrixTile::new, transmutation_matrix).build(null);
 	public static final TileEntityType<BreakingBlockTile> BREAKINGBLOCKTILE
-		= TileEntityType.Builder.create(BreakingBlockTile::new, breaking_block).build(null);
+		= TileEntityType.Builder.of(BreakingBlockTile::new, breaking_block).build(null);
 	
 	public static final TileEntityType<ButterflyBoxTree_Tile> BUTTERFLYBOXTREETILE
-		= TileEntityType.Builder.create(ButterflyBoxTree_Tile::new, butterflybox_tree).build(null);
+		= TileEntityType.Builder.of(ButterflyBoxTree_Tile::new, butterflybox_tree).build(null);
 	public static final TileEntityType<ButterflyBoxCrop_Tile> BUTTERFLYBOXCROPTILE
-		= TileEntityType.Builder.create(ButterflyBoxCrop_Tile::new, butterflybox_crop).build(null);
+		= TileEntityType.Builder.of(ButterflyBoxCrop_Tile::new, butterflybox_crop).build(null);
 	public static final TileEntityType<ButterflyBoxFlower_Tile> BUTTERFLYBOXGRASSTILE
-	= TileEntityType.Builder.create(ButterflyBoxFlower_Tile::new, butterflybox_grass).build(null);
+	= TileEntityType.Builder.of(ButterflyBoxFlower_Tile::new, butterflybox_grass).build(null);
 	
 }

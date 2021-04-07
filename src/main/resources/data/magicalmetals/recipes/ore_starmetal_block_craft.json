@@ -1,8 +1,9 @@
 {
 	"type": "minecraft:crafting_shapeless",
-	"ingredients": [{
-		"item": "minecraft:iron_ore"
-	}],
+	"ingredients": [
+	{	"item": "minecraft:iron_ore" },
+	{	"item": "magicalmetals:purifying_dust" }
+	],
 	"result": {
 		"item": "magicalmetals:ore_starmetal_block",
 		"count": 1

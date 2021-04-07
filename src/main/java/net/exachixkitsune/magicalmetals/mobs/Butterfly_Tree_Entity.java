@@ -23,9 +23,9 @@ public class Butterfly_Tree_Entity extends Butterfly_Entity {
 	@Override
 	protected void doPollinate(Block thisBlock, BlockState thisBlockState) {
 		SaplingBlock thisSapling = (SaplingBlock)thisBlock;
-		if (thisSapling.canUseBonemeal(world, rand, targetPos, thisBlockState)) {
+		if (thisSapling.isBonemealSuccess(level, random, targetPos, thisBlockState)) {
 			// Grow the Sapling
-			thisSapling.grow((ServerWorld)world, rand, targetPos, thisBlockState);
+			thisSapling.performBonemeal((ServerWorld)level, random, targetPos, thisBlockState);
 			// Reset pollination
 			currentPollinateRecharge = pollinateRechargeMax;
 			currentPollinateCharge = pollinateChargeTime;

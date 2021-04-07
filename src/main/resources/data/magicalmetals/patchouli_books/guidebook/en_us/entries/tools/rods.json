@@ -63,6 +63,11 @@
 			"type": "crafting",
 			"recipe": "magicalmetals:rods/rod_water",
 			"text": "This rod bestows Water Breathing for 30s."
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:rods/rod_fireresist",
+			"text": "This rod bestows Fire Resistance for 30s."
 		}
 	]
 }

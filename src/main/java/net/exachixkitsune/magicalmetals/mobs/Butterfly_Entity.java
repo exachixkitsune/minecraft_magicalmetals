@@ -27,8 +27,8 @@ public abstract class Butterfly_Entity extends AnimalEntity implements IFlyingAn
 		
 		protected static final int maxRangeFromHome = 16;
 		protected static final double goalSpeed = 0.5;
-		private static final int initialAge = 5*60*20; // Age is 300 seconds/ 5 minutes
-		protected static final int pollinateRechargeMax = 5*20; // Pollinate once every 5 seconds.
+		private static final int initialAge = 2*60*20; // Age is 2 minutes
+		protected static final int pollinateRechargeMax = 15*20; // Pollinate once every 15 seconds.
 		protected int currentPollinateRecharge = 0; // Pollinate recharge counter - needs to be 0 to allow for pollination
 		protected static final int pollinateChargeTime = 1*20; // Needs to be near an object for 1s to pollinate
 		protected int currentPollinateCharge = 0; // Timer that a butterfly needs to be near an object for it to be grown
@@ -39,13 +39,13 @@ public abstract class Butterfly_Entity extends AnimalEntity implements IFlyingAn
 			
 			// Make it fly!
 			// taken from mysticalworld:OwlEntity
-			this.moveController = new FlyingMovementController(this, 5, false);
+			this.moveControl = new FlyingMovementController(this, 5, false);
 			
 			// Give no XP on death to prevent farming
-			this.experienceValue = 0;
+			this.xpReward = 0;
 			
 			// Using the following property in order to give the mob a max age 
-			this.setGrowingAge(initialAge);
+			this.setAge(initialAge);
 			
 			// Pollination values
 			currentPollinateRecharge= 0;
@@ -53,21 +53,27 @@ public abstract class Butterfly_Entity extends AnimalEntity implements IFlyingAn
 			targetPos = null;
 		}
 
+		@Override
+		protected void dropExperience() {
+			// Never Drop XP.
+			// So, never do anything.
+		}
+
 		// Copied from
 		// https://github.com/MysticMods/MysticalWorld/blob/1.16/src/main/java/epicsquid/mysticalworld/entity/OwlEntity.java
 		// This is what I needed to make flying ACTUALLY work
 		@Override
-		protected PathNavigator createNavigator(World worldIn) {
+		protected PathNavigator createNavigation(World worldIn) {
 			FlyingPathNavigator pathnavigateflying = new FlyingPathNavigator(this, worldIn);
 			pathnavigateflying.setCanOpenDoors(false);
-			pathnavigateflying.setCanEnterDoors(true);
-			pathnavigateflying.setCanSwim(false);
+			pathnavigateflying.setCanPassDoors(true);
+			pathnavigateflying.setCanFloat(false);
 			return pathnavigateflying;
 		}
 		
 		// Same as createNavigator, taken from mysticalworld:OwlEntity
 		@Override
-		protected void updateFallState(double y, boolean onGroundIn, BlockState state, BlockPos pos) {
+		protected void checkFallDamage(double y, boolean onGroundIn, BlockState state, BlockPos pos) {
 		}
 
 		
@@ -83,20 +89,22 @@ public abstract class Butterfly_Entity extends AnimalEntity implements IFlyingAn
 		}
 
 		public void setHomePos(BlockPos newHome) {
-			this.setHomePosAndDistance(newHome, maxRangeFromHome);
+			this.restrictTo(newHome, maxRangeFromHome);
 		}
 
 		@Override
-		public void livingTick() {
-			super.livingTick();
-			if (!world.isRemote()) {
-				int myAge = this.getGrowingAge();
+		public void aiStep() {
+			super.aiStep();
+			if (!level.isClientSide()) {
+				int myAge = this.getAge();
 				if (myAge == 0) {
 					// Kill via 0 health - remove doesn't do pretty effects =(
 					this.setHealth(0);
 				}
 
-				if (this.getHomePosition().withinDistance(new BlockPos(0, 0, 0), 1.0)) {
+				// If "home" is at 0,0,0, then also destroy the butterfly.
+				// This is how butterflies die when the world starts
+				if (this.getRestrictCenter().closerThan(new BlockPos(0, 0, 0), 1.0)) {
 					this.setHealth(0);
 				}
 				
@@ -109,16 +117,17 @@ public abstract class Butterfly_Entity extends AnimalEntity implements IFlyingAn
 					// Can Pollinate
 					// Is the target not null
 					if (targetPos != null) {
-						if (targetPos.distanceSq(this.getPosition()) < (9.0D)) {
+						if (targetPos.distSqr(this.blockPosition()) < (9.0D)) {
 							// Close enough!
 							// Is the object a sapling still?
-							BlockState thisBlockState = world.getBlockState(targetPos);
+							BlockState thisBlockState = level.getBlockState(targetPos);
 							Block thisBlock = thisBlockState.getBlock();
 							if (PollinateBlockCheck(thisBlock)) {
 								
 								--currentPollinateCharge;
 								if (currentPollinateCharge <= 0) {
 									doPollinate(thisBlock, thisBlockState);
+									// This resets currentPollinateCharge and currentPollinateRecharge *IF* doPollinate succeeds 
 								}
 							} else {
 								// If it's not valid, remove it as the target
@@ -138,7 +147,7 @@ public abstract class Butterfly_Entity extends AnimalEntity implements IFlyingAn
 		
 		@Nullable
 		@Override
-		public AgeableEntity func_241840_a(ServerWorld p_241840_1_, AgeableEntity p_241840_2_) {
+		public AgeableEntity getBreedOffspring(ServerWorld p_241840_1_, AgeableEntity p_241840_2_) {
 			// Auto-generated method stub
 			return null;
 		}

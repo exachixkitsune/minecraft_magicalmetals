@@ -9,17 +9,17 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.item.ArmorMaterial;
 
 public enum MagicalArmourTiers implements IArmorMaterial {
-	STARMETAL ("starmetal", 0, ArmorMaterial.DIAMOND.getEnchantability(), ArmorMaterial.DIAMOND.getSoundEvent(),
+	STARMETAL ("starmetal", 0, ArmorMaterial.DIAMOND.getEnchantmentValue(), ArmorMaterial.DIAMOND.getEquipSound(),
 			ItemRegister.STARMETAL_INGOT_ITEM.get(), ArmorMaterial.DIAMOND.getToughness(), ArmorMaterial.DIAMOND.getKnockbackResistance()),
-	PURESTARMETAL("purestarmetal", 0, ArmorMaterial.DIAMOND.getEnchantability(), ArmorMaterial.DIAMOND.getSoundEvent(),
+	PURESTARMETAL("purestarmetal", 0, ArmorMaterial.DIAMOND.getEnchantmentValue(), ArmorMaterial.DIAMOND.getEquipSound(),
 			ItemRegister.PURESTARMETAL_INGOT_ITEM.get(), ArmorMaterial.DIAMOND.getToughness(), ArmorMaterial.DIAMOND.getKnockbackResistance()),
-	ADAMANT ("starmetal", 0, ArmorMaterial.DIAMOND.getEnchantability(), ArmorMaterial.DIAMOND.getSoundEvent(),
+	ADAMANT ("starmetal", 0, ArmorMaterial.DIAMOND.getEnchantmentValue(), ArmorMaterial.DIAMOND.getEquipSound(),
 			ItemRegister.ADAMANT_INGOT_ITEM.get(), ArmorMaterial.DIAMOND.getToughness(), ArmorMaterial.DIAMOND.getKnockbackResistance()),
-	BLUEIRON ("starmetal", 0, ArmorMaterial.DIAMOND.getEnchantability(), ArmorMaterial.DIAMOND.getSoundEvent(),
+	BLUEIRON ("starmetal", 0, ArmorMaterial.DIAMOND.getEnchantmentValue(), ArmorMaterial.DIAMOND.getEquipSound(),
 			ItemRegister.BLUEIRON_INGOT_ITEM.get(), ArmorMaterial.DIAMOND.getToughness(), ArmorMaterial.DIAMOND.getKnockbackResistance()),
-	GREENIRON ("starmetal", 0, ArmorMaterial.DIAMOND.getEnchantability(), ArmorMaterial.DIAMOND.getSoundEvent(),
+	GREENIRON ("starmetal", 0, ArmorMaterial.DIAMOND.getEnchantmentValue(), ArmorMaterial.DIAMOND.getEquipSound(),
 			ItemRegister.GREENIRON_INGOT_ITEM.get(), ArmorMaterial.DIAMOND.getToughness(), ArmorMaterial.DIAMOND.getKnockbackResistance()),
-	LUMINOUSGOLD ("starmetal", 0, ArmorMaterial.DIAMOND.getEnchantability(), ArmorMaterial.DIAMOND.getSoundEvent(),
+	LUMINOUSGOLD ("starmetal", 0, ArmorMaterial.DIAMOND.getEnchantmentValue(), ArmorMaterial.DIAMOND.getEquipSound(),
 			ItemRegister.LUMINOUSGOLD_INGOT_ITEM.get(), ArmorMaterial.DIAMOND.getToughness(), ArmorMaterial.DIAMOND.getKnockbackResistance());
 
 	private final String name;
@@ -36,34 +36,19 @@ public enum MagicalArmourTiers implements IArmorMaterial {
 		this.durability = in_durability;
 		this.enchantability = in_enchantability;
 		this.soundEvent = in_soundEvent;
-		this.repairMaterial = Ingredient.fromItems(in_repairMaterial);
+		this.repairMaterial = Ingredient.of(in_repairMaterial);
 		this.toughness = in_toughness;
 		this.knockbackResistance = in_knockbackResistance;
 	}
 	
 	@Override
-	public int getDurability(EquipmentSlotType slotIn) {
-		return this.durability;
+	public int getDefenseForSlot(EquipmentSlotType slotIn) {
+		return ArmorMaterial.DIAMOND.getDefenseForSlot(slotIn);
 	}
 
 	@Override
-	public int getDamageReductionAmount(EquipmentSlotType slotIn) {
-		return ArmorMaterial.DIAMOND.getDamageReductionAmount(slotIn);
-	}
-
-	@Override
-	public int getEnchantability() {
+	public int getEnchantmentValue() {
 		return this.enchantability;
-	}
-
-	@Override
-	public SoundEvent getSoundEvent() {
-		return this.soundEvent;
-	}
-
-	@Override
-	public Ingredient getRepairMaterial() {
-		return this.repairMaterial;
 	}
 
 	@Override
@@ -79,6 +64,21 @@ public enum MagicalArmourTiers implements IArmorMaterial {
 	@Override
 	public float getKnockbackResistance() {
 		return this.knockbackResistance;
+	}
+
+	@Override
+	public int getDurabilityForSlot(EquipmentSlotType slotIn) {
+		return this.durability;
+	}
+
+	@Override
+	public SoundEvent getEquipSound() {
+		return this.soundEvent;
+	}
+
+	@Override
+	public Ingredient getRepairIngredient() {
+		return this.repairMaterial;
 	}
 
 }

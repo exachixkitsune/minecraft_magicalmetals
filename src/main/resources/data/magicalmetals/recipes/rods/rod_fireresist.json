@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"AS",
+		"CB" ],
+	"key": {
+		"C": { "item": "magicalmetals:rod_component"},
+		"S": { "item": "magicalmetals:metal_starmetal_ingot"},
+		"A": { "item": "magicalmetals:metal_blueiron_ingot"},
+		"B": { "item": "magicalmetals:metal_luminousgold_ingot"}
+	},
+	"result": {
+		"item": "magicalmetals:rod_fireresist",
+		"count": 1
+	}
+}

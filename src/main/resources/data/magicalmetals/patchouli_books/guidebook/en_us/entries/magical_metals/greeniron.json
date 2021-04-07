@@ -20,6 +20,20 @@
 			"type": "crafting",
 			"recipe": "magicalmetals:enhancements/grassblock_greeniron",
 			"text": "Green Iron can also be used to create grass from dirt."
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:enhancements/fish_salmon_greeniron",
+			"text": "Green Iron can also be used to 'ressurect' fish from their item form."
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:enhancements/fish_cod_greeniron",
+			"recipe2": "magicalmetals:enhancements/fish_pufferfish_greeniron"
+		},
+		{
+			"type": "crafting",
+			"recipe": "magicalmetals:enhancements/fish_tropicalfish_greeniron"
 		}
 	]
 }

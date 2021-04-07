@@ -23,8 +23,8 @@ public class Butterfly_Grass_Entity extends Butterfly_Entity {
 	@Override
 	protected void doPollinate(Block thisBlock, BlockState thisBlockState) {
 		if (thisBlock == Blocks.DIRT) {
-			world.destroyBlock(targetPos, false);
-			world.setBlockState(targetPos, Blocks.GRASS_BLOCK.getDefaultState());
+			level.destroyBlock(targetPos, false);
+			level.setBlockAndUpdate(targetPos, Blocks.GRASS_BLOCK.defaultBlockState());
 			currentPollinateRecharge = pollinateRechargeMax;
 			currentPollinateCharge = pollinateChargeTime;
 		}

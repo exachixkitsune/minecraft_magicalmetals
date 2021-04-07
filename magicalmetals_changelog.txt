@@ -20,3 +20,43 @@ For Minecraft 1.16.4
 			Pages are read by default.
 		Fixes
 			BreakingBlock's tile entity is now created correctly.
+			
+== Version 1.3 ==
+For Forge 36.1.0
+For Minecraft 1.16.5
+
+	Added:
+		JEI integration
+			Description exists on the transmuted blocks to point to how they could be made.
+		Transmuatation Matrix
+			"Using" (Right-clicking on) the block now displays what blocks will be made via the biome.
+		Battle Hoe
+			It's a hoe
+			It lights undead on fire.
+			What more to say
+		Purifying Dust
+			New method to make starmetal ingots and ore.
+		Recipe
+			Can use Green Iron along with a fish item and a water bucket to put the fish in a bucket.
+		Rods
+			Fire Resistance rod created
+	
+	Changes:
+		Breaking Block
+			Can be made in larger amounts (4 instead of 1)
+			Drop themselves when broken so aren't lost forever.
+		Orichalcum recipe
+			Now 1 iron + 1 gold makes 2 orichalcum
+		Butterflies
+			Butterfly timings changed.
+			Pollinates once every 15s (was 5s).
+			Lives for 2 minutes (was 5 minutes)
+			Should no longer drop any XP.
+		Starmetal and Starmetal Ore
+			Both these items can now be created by applying purifying dust to ingots and ore.
+		Rod Textures
+			All the textures have been changed to be a bit darker and have greater contrast.
+		
+	Code Changes:
+		Updates all the names that changed between forge 35.0.1 and 36.0.1
+		Transmuation results now in a new utility function (ConvertMode)
