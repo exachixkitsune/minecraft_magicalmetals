@@ -1,23 +1,23 @@
 {
 	"itemGroup.magicalmetals": "Magical Metals",
-	"block.magicalmetals.metal_starmetal_block": "Starmetal Block",
-	"block.magicalmetals.metal_purestarmetal_block": "Pure Starmetal Block",
+	"block.magicalmetals.metal_starmetal_block": "Meteoric Iron Block",
+	"block.magicalmetals.metal_purestarmetal_block": "Pure Meteoric Iron Block",
 	"block.magicalmetals.metal_adamant_block": "Adamant Block",
 	"block.magicalmetals.metal_blueiron_block": "Blue Iron Block",
 	"block.magicalmetals.metal_greeniron_block": "Green Iron Block",
 	"block.magicalmetals.metal_luminousgold_block": "Luminous Gold Block",
 	"block.magicalmetals.metal_orichalcum_block": "Orichalcum Block",
 	
-	"block.magicalmetals.metal_purestarmetal_block.jei": "Pure Starmetal is created in a variety of locations, using the Transmuation Matrix. For more information see the magical metals guidebook.",
+	"block.magicalmetals.metal_purestarmetal_block.jei": "Pure Meteoric Iron is created in a variety of locations, using the Transmuation Matrix. For more information see the magical metals guidebook.",
 	"block.magicalmetals.metal_adamant_block.jei": "Adamant is created using the Transmutation Matrix from Orichalcum blocks below y-level 30. For more information see the magical metals guidebook.",
 	"block.magicalmetals.metal_blueiron_block.jei": "Blue Iron is created using the Transmutation Matrix from Orichalcum blocks in cold biomes. For more information see the magical metals guidebook.",
 	"block.magicalmetals.metal_greeniron_block.jei": "Green Iron is created using the Transmutation Matrix from Orichalcum blocks in wet biomes like rivers and oceans. For more information see the magical metals guidebook.",
 	"block.magicalmetals.metal_luminousgold_block.jei": "Luminous Gold is created using the Transmutation Matrix from Orichalcum blocks in hot biomes. For more information see the magical metals guidebook.",
 	
-	"block.magicalmetals.ore_starmetal_block": "Starmetal Ore",
+	"block.magicalmetals.ore_starmetal_block": "Meteoric Iron Ore",
 	
 	"block.magicalmetals.transmutation_matrix": "Transmutation Matrix",
-	"block.magicalmetals.transmutation_anchor_pure": "Transmutation Anchor, Pure Starmetal",
+	"block.magicalmetals.transmutation_anchor_pure": "Transmutation Anchor, Pure Meteoric Iron",
 	"block.magicalmetals.transmutation_anchor_adamant": "Transmutation Anchor, Adamant",
 	"block.magicalmetals.transmutation_anchor_blueiron": "Transmutation Anchor, Blue Iron",
 	"block.magicalmetals.transmutation_anchor_greeniron": "Transmutation Anchor, Green Iron",
@@ -28,8 +28,8 @@
 	"block.magicalmetals.butterflybox_grass": "Butterfly Box (Grass)",
 	"block.magicalmetals.butterflybox_tree": "Butterfly Box (Tree)",
 	
-	"item.magicalmetals.metal_starmetal_ingot": "Starmetal Ingot",
-	"item.magicalmetals.metal_purestarmetal_ingot": "Pure Starmetal Ingot",
+	"item.magicalmetals.metal_starmetal_ingot": "Meteoric Iron Ingot",
+	"item.magicalmetals.metal_purestarmetal_ingot": "Pure Meteoric Iron Ingot",
 	"item.magicalmetals.metal_adamant_ingot": "Adamant Ingot",
 	"item.magicalmetals.metal_blueiron_ingot": "Blue Iron Ingot",
 	"item.magicalmetals.metal_greeniron_ingot": "Green Iron Ingot",
@@ -58,7 +58,7 @@
 	"entity.magicalmetals.butterfly_tree": "Butterfly (Tree)",
 	
 	"magicalmetals.transmutationmsg.base": "This biome makes: ",
-	"magicalmetals.purestarmetal": "Pure Starmetal",
+	"magicalmetals.purestarmetal": "Pure Meteoric Iron",
 	"magicalmetals.adamant": "Adamant",
 	"magicalmetals.greeniron": "Green Iron",
 	"magicalmetals.blueiron": "Blue Iron",

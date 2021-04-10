@@ -72,7 +72,7 @@
 		},
 		{
 			"type": "text",
-			"text": "If the transmutation is performed in a hot biome (One where it never snows, or the Nether), the result is $(l:magical_metals/luminousgold)Luminous Gold$().$(br2)If the transmutation is performed where it snows, the result is $(l:magical_metals/blueiron)Blue Iron$().$(br2)Otherwise, $(l:magical_metals/purestarmetal)Pure Starmetal$() is produced."
+			"text": "If the transmutation is performed in a hot biome (One where it never snows, or the Nether), the result is $(l:magical_metals/luminousgold)Luminous Gold$().$(br2)If the transmutation is performed where it snows, the result is $(l:magical_metals/blueiron)Blue Iron$().$(br2)Otherwise, $(l:magical_metals/purestarmetal)Pure Meteroic Iron$() is produced."
 		}
 	]
 }

@@ -1,0 +1,12 @@
+{
+	"replace": false,
+	"values": [
+		"magicalmetals:metal_starmetal_ingot",
+		"magicalmetals:metal_purestarmetal_ingot",
+		"magicalmetals:metal_adamant_ingot",
+		"magicalmetals:metal_blueiron_ingot",
+		"magicalmetals:metal_greeniron_ingot",
+		"magicalmetals:metal_luminousgold_ingot",
+		"magicalmetals:metal_orichalcum_ingot"
+	]
+}

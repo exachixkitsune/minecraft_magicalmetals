@@ -1,5 +1,5 @@
 {
-	"name": "Starmetal",
+	"name": "Meteroic Iron",
 	"icon": "magicalmetals:metal_starmetal_block",
 	"category": "magicalmetals:magical_metals",
 	"priority": true,
@@ -10,14 +10,14 @@
 		},
 		{
 			"type": "spotlight",
-			"title": "Starmetal",
+			"title": "Meteroic Iron",
 			"item": "magicalmetals:metal_starmetal_block",
-			"text": "Starmetal is a foundational material for many magical components."
+			"text": "Meteroic Iron is a foundational material for many magical components."
 		},
 		{
 			"type": "spotlight",
 			"item": "magicalmetals:ore_starmetal_block",
-			"text": "Starmetal ore should generate deep underground. Due to a number of $(t:The mod author couldn't work out how to add it to world generation)interesting magical confluxes$(t), it does not. However, it can be created from iron ore through purification using special dust.$(br2)It may be smelted into ingots like all other ore."
+			"text": "Meteroic Iron can be created from iron ore through purification using special dust.$(br2)It may be smelted into ingots like all other ore."
 		},
 		{
 			"type": "crafting",

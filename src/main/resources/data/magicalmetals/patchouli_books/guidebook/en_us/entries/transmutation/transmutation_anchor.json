@@ -19,7 +19,7 @@
 			"type": "crafting",
 			"recipe": "magicalmetals:transmutation/transmutation_anchor_pure",
 			"title": "Pure",
-			"text": "This anchor ensures an output is $(l:magical_metals/pure_starmetal)Pure Starmetal$()"
+			"text": "This anchor ensures an output is $(l:magical_metals/pure_starmetal)Pure Meteroic Iron$()"
 		},
 		{
 			"type": "crafting",

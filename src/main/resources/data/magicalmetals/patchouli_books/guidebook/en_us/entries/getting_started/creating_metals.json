@@ -16,11 +16,11 @@
 		},
 		{
 			"type": "text",
-			"text": "The creation process of metals focuses on the $(l:transmutation/transmutation_matrix)transmutation matrix$(). It is through this block that all magical metals are created. To create the $(l:transmutation/transmutation_matrix)transmutation matrix$(), one must first create $(l:magical_metals/starmetal)starmetal$(), obtained from iron ore."
+			"text": "The creation process of metals focuses on the $(l:transmutation/transmutation_matrix)transmutation matrix$(). It is through this block that all magical metals are created. To create the $(l:transmutation/transmutation_matrix)transmutation matrix$(), one must first create $(l:magical_metals/meteroic)meteroic iron$(), obtained from iron ore."
 		},
 		{
 			"type": "text",
-			"text": "$(l:magical_metals/orichalcum)Orichalcum$() is used as the input block to the $(l:transmutation/transmutation_matrix)transmutation matrix$(), and is converted into the new metal types by the transmutation matrix. Every transmutation operation requires two orichalcum blocks, and two 'focus' blocks, as described in $(l:transmutation/transmutation_matrix#transmutationbasics)transmutation matrix$(). Initially, these can be starmetal blocks."
+			"text": "$(l:magical_metals/orichalcum)Orichalcum$() is used as the input block to the $(l:transmutation/transmutation_matrix)transmutation matrix$(), and is converted into the new metal types by the transmutation matrix. Every transmutation operation requires two orichalcum blocks, and two 'focus' blocks, as described in $(l:transmutation/transmutation_matrix#transmutationbasics)transmutation matrix$(). Initially, these can be meteroic iron blocks."
 		},
 		{
 			"type": "text",
